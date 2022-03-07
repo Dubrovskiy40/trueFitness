@@ -1,5 +1,6 @@
 import './App.css';
 import Footer from "./components/footer/Footer";
+import RequestForm from "./components/request-form";
 
 function App(props) {
   return (
@@ -9,6 +10,7 @@ function App(props) {
           Place for our future True Fitness app =)
         </p>
       </header>
+      <RequestForm />
       <Footer />
     </div>
   );
