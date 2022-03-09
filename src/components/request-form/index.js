@@ -13,7 +13,7 @@ export default () => {
 
     return (
         <div className={style.box}>
-            <form
+            <form id="form-application"
                 onSubmit={submit}
                 className={style.form}>
                 <p className={`${style.text} ${style['form-item']}`}>
