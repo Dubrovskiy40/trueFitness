@@ -1,7 +1,7 @@
 import { Carousel } from '@trendyol-js/react-carousel';
 import { useState } from 'react';
 import './carousel.css';
-import workouteImg1 from '../../images/carousel/workouteImg1.png'
+import workoutImg1 from '../../images/carousel/workoutImg1.png'
 import CarouselArrowLeft from '../CarouselArrows/CarouselArrowLeft';
 import CarouselArrowRight from '../CarouselArrows/CarouselArrowRight';
 
@@ -43,7 +43,7 @@ const CarouselComp = (props) => {
         {slider.map((item) => (
           <a target="_blank" href={item.link} >
             <div className="carousel__item" key={item.id} style={{
-              backgroundImage: `url(${workouteImg1})`,
+              backgroundImage: `url(${workoutImg1})`,
             }}>
               <h3 className="carousel__item__heading">{item.heading}</h3>
             </div>
