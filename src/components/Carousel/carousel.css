@@ -1,0 +1,38 @@
+.carousel__wrapper {
+  height: 90vh;
+  margin: 50px 0;
+}
+.carousel__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 53px;
+  margin-bottom: 25px;
+}
+.carousel__item {
+  height: 400px;
+  margin-right: 40px;
+}
+.carousel__item__heading {
+  color: white;
+  max-width: 200px;
+  text-align: left;
+  margin-left: 20px;
+  padding-top: 10px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 53px;
+}
+.styles-module_carousel-arrow__26sRw{
+  margin-top: 25vh;
+  cursor: pointer;
+}
+.styles-module_carousel-arrow__26sRw::after {
+  content: '-';
+  font-weight: 700;
+  font-size: 72px;
+  color: #000;
+  border: none;
+}
+.styles-module_carousel-arrow__26sRw:hover {
+  background-color: gray;
+}

@@ -1,4 +1,5 @@
 import './App.css';
+import CarouselComp from './components/Carousel/Carousel';
 import Footer from "./components/footer/Footer";
 
 function App(props) {
@@ -9,6 +10,8 @@ function App(props) {
           Place for our future True Fitness app =)
         </p>
       </header>
+      <CarouselComp slider='Тренировки' />
+      <CarouselComp slider='Рецепты' />
       <Footer />
     </div>
   );
