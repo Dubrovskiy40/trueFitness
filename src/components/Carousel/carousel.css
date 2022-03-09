@@ -7,6 +7,10 @@
   font-size: 36px;
   line-height: 53px;
   margin-bottom: 25px;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: center;
+  background-size: cover;
 }
 .carousel__item {
   height: 400px;

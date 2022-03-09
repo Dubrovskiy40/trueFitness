@@ -44,10 +44,6 @@ const CarouselComp = (props) => {
           <a target="_blank" href={item.link} >
             <div className="carousel__item" key={item.id} style={{
               backgroundImage: `url(${workouteImg1})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundColor: 'black',
-              backgroundPosition: 'center',
-              backgroundSize: 'cover'
             }}>
               <h3 className="carousel__item__heading">{item.heading}</h3>
             </div>

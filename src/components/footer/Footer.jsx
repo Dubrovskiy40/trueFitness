@@ -1,29 +1,29 @@
-import './footer.css';
+import style from './footer.module.scss';
 
 const Footer = (props) => {
     return (
-        <div className="footer">
-            <h2 className="footer__title title">
+        <div className={style.footer}>
+            <h2 className={ [style.footer__title, style.title].join(' ') }>
                 Around the web
             </h2>
-            <ul className="footer__socialNetwork socialNetwork__list">
-                <li className="socialNetwork__item google__item">
-                    <a href="https://plus.google.com/" className="socialNetwork__link google__link"></a>
+            <ul className={ [style.footer__socialNetwork, style.socialNetwork__list].join(' ') }>
+                <li className={ [style.socialNetwork__item, style.google__item].join(' ') }>
+                    <a href="https://plus.google.com/" className={ [style.socialNetwork__link, style.google__link].join(' ') }></a>
                 </li>
-                <li className="socialNetwork__item youtube__item">
-                    <a href="https://www.youtube.com/" className="socialNetwork__link youtube__link"></a>
+                <li className={ [style.socialNetwork__item, style.youtube__item].join(' ') }>
+                    <a href="https://www.youtube.com/" className={ [style.socialNetwork__link, style.youtube__link].join(' ') }></a>
                 </li>
-                <li className="socialNetwork__item pinterest__item">
-                    <a href="https://www.pinterest.ru/" className="socialNetwork__link pinterest__link"></a>
+                <li className={ [style.socialNetwork__item, style.pinterest__item].join(' ') }>
+                    <a href="https://www.pinterest.ru/" className={ [style.socialNetwork__link, style.pinterest__link].join(' ') }></a>
                 </li>
-                <li className="socialNetwork__item facebook__item">
-                    <a href="https://www.facebook.com/" className="socialNetwork__link facebook__link"></a>
+                <li className={ [style.socialNetwork__item, style.facebook__item].join(' ') }>
+                    <a href="https://www.facebook.com/" className={ [style.socialNetwork__link, style.facebook__link].join(' ') }></a>
                 </li>
-                <li className="socialNetwork__item twitter__item">
-                    <a href="https://twitter.com/" className="socialNetwork__link twitter__link"></a>
+                <li className={ [style.socialNetwork__item, style.twitter__item].join(' ') }>
+                    <a href="https://twitter.com/" className={ [style.socialNetwork__link, style.twitter__link].join(' ') }></a>
                 </li>
-                <li className="socialNetwork__item instagram__item">
-                    <a href="https://www.instagram.com/" className="socialNetwork__link instagram__link"></a>
+                <li className={ [style.socialNetwork__item, style.instagram__item].join(' ') }>
+                    <a href="https://www.instagram.com/" className={ [style.socialNetwork__link, style.instagram__link].join(' ') }></a>
                 </li>
             </ul>
         </div>
