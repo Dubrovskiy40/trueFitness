@@ -1,21 +1,31 @@
 import './App.css';
-import CarouselComp from './components/Carousel/Carousel';
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Footer from "./components/footer/Footer";
-import RequestForm from "./components/request-form";
 import Header from "./components/header";
-import Main from "./components/main/Main";
-import AboutUs from "./components/aboutUs/AboutUs";
+import MainPage from "./components/MainPage"
+import Error from "./components/Error"
+import Recipes from "./components/Recipes"
+import Contacts from "./components/Contacts"
+import Workout from "./components/Workout"
+import Account from "./components/Account"
+
+
 
 function App(props) {
   return (
     <div className="App">
-      <Header />
-      <Main />
-      <CarouselComp slider='Тренировки' />
-      <AboutUs />
-      <CarouselComp slider='Рецепты' />
-      <RequestForm />
-      <Footer />
+        <Router>
+            <Header />
+            <Routes>
+                <Route exact path="/" element={<MainPage />} />
+                <Route path="/workout" element={<Workout />} />
+                <Route path="/recipes" element={<Recipes />} />
+                <Route path="/contacts" element={<Contacts />} />
+                <Route path="/account" element={<Account />} />
+                <Route path="*" element={<Error />} />
+            </Routes>
+            <Footer />
+        </Router>
     </div>
   );
 }

@@ -1,26 +1,27 @@
 import style from './style.module.scss';
+import {Link} from "react-router-dom";
 
 export default () => {
     return (
         <header className={style.header}>
             <div className={style.header__logo}>
-                <a href="#" className={style.header__logo_text}>tf</a>
+                <Link to="/" className={style.header__logo_text}>tf</Link>
             </div>
             <ul className={style.header__list}>
                 <li className={style.header__list_item}>
-                    <a href="#" >Тренировки</a>
+                    <Link to="/workout">Тренировки</Link>
                 </li>
                 <li className={style.header__list_item}>
                     <a href="#" >О нас</a>
                 </li>
                 <li className={style.header__list_item}>
-                    <a href="#">Рецепты</a>
+                    <Link to="/recipes">Рецепты</Link>
                 </li>
                 <li className={style.header__list_item}>
-                    <a href="#" >Контакты</a>
+                    <Link to="/contacts" >Контакты</Link>
                 </li>
                 <li className={style.header__list_item}>
-                    <a href="#" >Личный кабинет</a>
+                    <Link to="/account" >Личный кабинет</Link>
                 </li>
             </ul>
             <button title="Версия для слабовидящих" className={style.header__special_version}>
