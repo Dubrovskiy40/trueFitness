@@ -1,0 +1,311 @@
+.survey {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__wrap {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+    flex-flow: column;
+  }
+
+  &__wrap_block {
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    flex-flow: column;
+  }
+
+  &__top {
+    background: url(../../images/survey/survey-1.png) no-repeat 0 0,
+    #000 url(../../images/survey/survey-2.png) no-repeat 100% 0;
+    color: #ffffff;
+    padding: 35px 0 20px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 53px;
+    color: #FF6118;
+    margin-bottom: 30px;
+  }
+
+  &__top_block {
+
+    & label {
+      margin-top: 30px;
+    }
+  }
+
+  &__inp {
+    border-bottom: 2px solid #FF6118;
+    width: 195px;
+    background-color: #000;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    //padding: 3px 0;
+    //margin-left: 10px;
+  }
+
+  &__center {
+    background: url("../../images/survey/survey-3.png") no-repeat 0 0,
+    #fff url("../../images/survey/survey-4.png") no-repeat 100% 0;
+    color: #000;
+    padding: 20px 0 20px;
+  }
+
+  &__bottom {
+    background: url("../../images/survey/survey-5.png") center / contain no-repeat #000;
+    color: #ffffff;
+    padding: 20px 0 77px;
+  }
+
+  &__wrap1 {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    width: 108px;
+
+    & h3 {
+      font-size: 18px;
+      line-height: 27px;
+      text-align: left;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 37px;
+    margin-left: 30px;
+
+    &_gender {
+      flex-direction: row;
+    }
+
+    & label:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    & label {
+      font-size: 18px;
+      line-height: 27px;
+      text-align: left;
+    }
+
+    & label input {
+      margin-right: 17px;
+    }
+
+    & p {
+      margin-top: 5px;
+      font-size: 14px;
+      line-height: 21px;
+      color: #000000;
+      margin-left: 37px;
+    }
+  }
+
+  &__btn {
+    max-width: 447px;
+    padding: 20px 30px;
+    color: #fff;
+    background: #FF6118;
+    border-radius: 20px;
+    font-size: 20px;
+    line-height: 30px;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+}
+
+.span__range {
+  margin: 0 auto;
+  margin-top: 8px;
+}
+
+.survey__inpRange:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+input[type=range]  {
+  width: 195px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  height: 2px;
+  //border: 2px solid #FF6118;
+  background-color: #fff;
+}
+input[type=range]::-webkit-slider-thumb {
+  background: #FF6118;
+  border:  2px solid #FF6118;
+  border-radius: 10px/100%;
+  cursor: pointer;
+  width:10px;
+  height: 10px;
+  -webkit-appearance: none;
+  margin-top: -3px;
+}
+
+input[type=range]::-moz-range-track {
+  border-radius: 10px/100%;
+  height: 5px;
+  //border: 2px solid #FF6118;
+  background-color: #fff;
+}
+input[type=range]::-moz-range-thumb {
+  border: 2px solid #FF6118;
+  background-color: #FF6118;
+  border-radius: 10px/100%;
+  cursor: pointer;
+}
+
+
+//Стилизация radio
+/* для элемента input c type="radio" */
+.survey__radio>input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+/* для элемента label связанного с .survey__radio */
+.survey__radio>span {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+/* создание в label псевдоэлемента before со следующими стилями */
+.survey__radio>span::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  margin-right: 19px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 16px;
+}
+
+.survey__radio_white>span::before {
+  border: 2px solid #fff;
+}
+
+/* стили при наведении курсора на радио */
+.survey__radio>input:hover+span:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+/* стили для активной радиокнопки (при нажатии на неё) */
+.survey__radio>input:not(:disabled):active+span::before {
+  background: #FF6118;
+}
+/* стили для радиокнопки, находящейся в состоянии checked */
+.survey__radio>input:checked+span::before {
+  border-color: #FF6118;
+  background-color: #000000;
+}
+
+//Стилизация checkbox
+/* для элемента input c type="checkbox" */
+.survey__checkbox>input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+//* для элемента label, связанного с.survey__checkbox */
+.survey__checkbox>span {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+//* создание в label псевдоэлемента before со следующими стилями */
+.survey__checkbox>span::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 19px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 2px solid #FFFFFF;
+  margin-right: 19px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+/* стили при наведении курсора на checkbox */
+.survey__checkbox>input:hover+span:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/* стили для активного чекбокса (при нажатии на него) */
+.survey__checkbox>input:not(:disabled):active+span::before {
+  background: #FF6118;
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.survey__checkbox>input:checked+span::before {
+  border-color: #FF6118;
+  background-color: #000000;
+
+  left: 5px;
+  top: -8px;
+  width: 13px;
+  height: 21px;
+  border: solid #FF6118;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+//Стилизация М Ж
+.survey__item_gender .survey__gender:first-child {
+  margin-right: 17px;
+  padding-right: 17px;
+  border-right: 2px solid #FFFFFF;
+}
+
+.survey__gender>input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.survey__gender>input:hover+span:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.survey__gender>input:checked + span {
+  color: #FF6118;
+}
