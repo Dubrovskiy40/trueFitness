@@ -7,9 +7,9 @@ export default () => {
     return (
         <div>
             <Main />
-            <CarouselComp slider='Тренировки' />
+            <CarouselComp slider='Тренировки' link='workoutsCarouselItems' />
             <AboutUs />
-            <CarouselComp slider='Рецепты' />
+            <CarouselComp slider='Рецепты' link='recipesCarouselItems' />
             <RequestForm />
         </div>
     )
