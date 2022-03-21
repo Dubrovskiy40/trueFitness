@@ -1,5 +1,20 @@
-export default () => {
+import style from './style.module.scss'
+
+export default ({name, surname, age, imageSrc}) => {
     return (
-        <h1>Личный кабинет</h1>
+        <div className={style['account-wrapper']}>
+
+            <div className={style['user-info']}>
+                {imageSrc && <img
+                            className={style.photo}
+                            src={imageSrc}
+                            alt="фото пользователя"/>}
+                <span className={style['user-name']}>{surname} {name}, {age}</span>
+            </div>
+            <div className={style.footer}>
+                <span className={style['user-name']}>{surname} {name}, {age}</span>
+            </div>
+        </div>
+
     )
 }
