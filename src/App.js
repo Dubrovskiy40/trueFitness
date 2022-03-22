@@ -9,9 +9,14 @@ import Contacts from "./components/Contacts"
 import Workout from "./components/Workout"
 import Account from "./components/Account"
 
-
+import ModalWindow from "./components/modalWindow/ModalWindow";
+import {useState} from "react";
 
 function App(props) {
+    const [isModal, setModal] = useState(true);
+    const onCloseWindow = () => setModal(false);
+    const onOpenWindow = () => setModal(true);
+
   return (
     <div className="App">
         <Router>
@@ -24,8 +29,11 @@ function App(props) {
                 <Route path="/account" element={<Account />} />
                 <Route path="*" element={<Error />} />
             </Routes>
-            <Footer />
         </Router>
+        <ModalWindow visible={isModal}
+            title='Восстановление пароля'
+            onCloseWindow={onCloseWindow}
+        />
     </div>
   );
 }
