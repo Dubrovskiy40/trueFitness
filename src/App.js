@@ -13,6 +13,10 @@ import ModalWindow from "./components/modalWindow/ModalWindow";
 import {useState} from "react";
 
 function App(props) {
+    const [isModal, setModal] = useState(false);
+    const onCloseWindow = () => setModal(false);
+    const onOpenWindow = () => setModal(true);
+
     const image = require('./images/users/1.png');
     console.log(window.location)
   return (
