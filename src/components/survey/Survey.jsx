@@ -9,6 +9,12 @@ const Survey = () => {
     const [targetWeight, setTargetWeight] = useState('60');
     const [howDays, setHowDays] = useState('30');
 
+    const [checked, setChecked] = useState(false);
+
+    const handleChangeCheckbox = () => {
+        setChecked(checked ? true : !checked);
+    };
+
     return (
         <div className={style.survey}>
             <form className={style.survey__form} action="">
@@ -86,20 +92,20 @@ const Survey = () => {
                                 </div>
                                 <div className={style.survey__item}>
                                     <label className={style.survey__radio} htmlFor="aim1">
-                                        <input type="radio" id="aim1" name="aim" />
+                                        <input type="radio" id="aim1" name="aim" onClick={() => (setChecked(false))} />
                                         <span>Потеря веса</span>
                                     </label>
                                     <label className={style.survey__radio} htmlFor="aim2">
-                                        <input type="radio" id="aim2" name="aim" />
+                                        <input type="radio" id="aim2" name="aim" onClick={handleChangeCheckbox} />
                                         <span>Сохранение моего нынешнего веса</span>
                                     </label>
                                     <label className={style.survey__radio} htmlFor="aim3">
-                                        <input type="radio" id="aim3" name="aim" />
+                                        <input type="radio" id="aim3" name="aim" onClick={() => (setChecked(false))} />
                                         <span>Увеличение веса</span>
                                     </label>
                                 </div>
                             </div>
-                            <div className={style.survey__wrap1}>
+                            <div className={`${style.survey__wrap1} ${checked ? style.block__disabled : ''}`}>
                                 <div className={style.survey__subtitle}>
                                     <h3>Желаемый<br/> Вес:</h3>
                                 </div>
@@ -108,7 +114,7 @@ const Survey = () => {
                                     <span className={style.span__range}>{targetWeight}</span>
                                 </div>
                             </div>
-                            <div className={style.survey__wrap1}>
+                            <div className={`${style.survey__wrap1} ${checked ? style.block__disabled : ''}`}>
                                 <div className={style.survey__subtitle}>
                                     <h3>Период<br/> тренировок<br/> (дней):</h3>
                                 </div>
