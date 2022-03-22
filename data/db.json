@@ -1,0 +1,76 @@
+{
+  "workoutsCarouselItems": [
+    {
+      "backgroundImg": "workoutImg1.png",
+      "heading": "Пресс будет гореть!",
+      "headingPosition": "heading--top-left",
+      "link": "#",
+      "id": "workoutImage1"
+    },
+    {
+      "backgroundImg": "workoutImg2.png",
+      "heading": "Тренировка на верхнюю часть тела",
+      "headingPosition": "heading--top-left",
+      "link": "#",
+      "id": "workoutImage2"
+    },
+    {
+      "backgroundImg": "workoutImg3.png",
+      "heading": "Круговая тренировка",
+      "headingPosition": "heading--top-left",
+      "link": "#",
+      "id": "workoutImage3"
+    },
+    {
+      "backgroundImg": "workoutImg4.png",
+      "heading": "Тренировка с инвентарём",
+      "headingPosition": "heading--top-left",
+      "link": "#",
+      "id": "workoutImage4"
+    },
+    {
+      "backgroundImg": "workoutImg5.png",
+      "heading": "Ещё ...",
+      "headingPosition": "heading--center",
+      "link": "#",
+      "id": "workoutImage5"
+    }
+  ],
+  "recipesCarouselItems": [
+    {
+      "backgroundImg": "recipesImg1.png",
+      "heading": "Салаты",
+      "headingPosition": "heading--center",
+      "link": "#",
+      "id": "recipeImage1"
+    },
+    {
+      "backgroundImg": "recipesImg2.png",
+      "heading": "Десерты",
+      "headingPosition": "heading--center",
+      "link": "#",
+      "id": "recipeImage2"
+    },
+    {
+      "backgroundImg": "recipesImg3.png",
+      "heading": "Первое блюдо",
+      "headingPosition": "heading--center",
+      "link": "#",
+      "id": "recipeImage3"
+    },
+    {
+      "backgroundImg": "recipesImg4.png",
+      "heading": "Второе блюдо",
+      "headingPosition": "heading--center",
+      "link": "#",
+      "id": "recipeImage4"
+    },
+    {
+      "backgroundImg": "recipesImg5.png",
+      "heading": "Ещё ...",
+      "headingPosition": "heading--center",
+      "link": "#",
+      "id": "recipeImage5"
+    }
+  ]
+}

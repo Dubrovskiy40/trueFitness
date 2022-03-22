@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header";
 import MainPage from "./components/MainPage"
@@ -13,10 +13,8 @@ import ModalWindow from "./components/modalWindow/ModalWindow";
 import {useState} from "react";
 
 function App(props) {
-    const [isModal, setModal] = useState(true);
-    const onCloseWindow = () => setModal(false);
-    const onOpenWindow = () => setModal(true);
-
+    const image = require('./images/users/1.png');
+    console.log(window.location)
   return (
     <div className="App">
         <Router>
@@ -26,9 +24,16 @@ function App(props) {
                 <Route path="/workout" element={<Workout />} />
                 <Route path="/recipes" element={<Recipes />} />
                 <Route path="/contacts" element={<Contacts />} />
-                <Route path="/account" element={<Account />} />
+                <Route path="/account"
+                       element={<Account
+                                name="Сергей"
+                                surname="Иванов"
+                                age={22}
+                                imageSrc={image}
+                       />} />
                 <Route path="*" element={<Error />} />
             </Routes>
+            {!['/account'].includes(window.location.pathname) && <Footer/>}
         </Router>
         <ModalWindow visible={isModal}
             title='Восстановление пароля'
