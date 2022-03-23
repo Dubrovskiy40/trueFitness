@@ -99,6 +99,7 @@
     align-items: flex-start;
     margin-bottom: 37px;
     margin-left: 30px;
+    //position: relative;
 
     &_gender {
       flex-direction: row;
@@ -123,7 +124,6 @@
       font-size: 14px;
       line-height: 21px;
       color: #000000;
-      margin-left: 37px;
     }
   }
 
@@ -143,154 +143,146 @@
   }
 }
 
+.range {
+  display: flex;
+  justify-content: space-between;
+
+  &__span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+
+    &_black {
+      color: rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  &__spanMin {
+    margin-right: 9px;
+  }
+
+  &__spanMax {
+    margin-left: 9px;
+  }
+}
+
 .span__range {
   margin: 0 auto;
   margin-top: 8px;
 }
 
-.survey__inpRange:hover {
-  opacity: 0.7;
-  cursor: pointer;
-}
-input[type=range]  {
+.survey__inpRange {
   width: 195px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
-input[type=range]::-webkit-slider-runnable-track {
-  height: 2px;
-  //border: 2px solid #FF6118;
-  background-color: #fff;
-}
-input[type=range]::-webkit-slider-thumb {
-  background: #FF6118;
-  border:  2px solid #FF6118;
-  border-radius: 10px/100%;
-  cursor: pointer;
-  width:10px;
-  height: 10px;
-  -webkit-appearance: none;
-  margin-top: -3px;
+
+  &::-webkit-slider-thumb {
+    background: #FF6118;
+    border: #FF6118;
+    border-radius: 10px/100%;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    margin-top: -5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
 }
 
-input[type=range]::-moz-range-track {
-  border-radius: 10px/100%;
-  height: 5px;
-  //border: 2px solid #FF6118;
-  background-color: #fff;
+.survey__inpRange_white {
+  background-color: #000;
+
+  &::-webkit-slider-runnable-track {
+    height: 1px;
+    border: 2px solid #FFFFFF;
+  }
 }
-input[type=range]::-moz-range-thumb {
-  border: 2px solid #FF6118;
-  background-color: #FF6118;
-  border-radius: 10px/100%;
-  cursor: pointer;
+
+.survey__inpRange_black {
+  background-color: #fff;
+
+  &::-webkit-slider-runnable-track {
+    height: 1px;
+    border: 2px solid #FF6118;
+  }
 }
 
 
 //Стилизация radio
-/* для элемента input c type="radio" */
-.survey__radio>input {
+.radio {
+  padding-left: 36px;
+}
+
+.radio__input {
   position: absolute;
-  z-index: -1;
-  opacity: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
-/* для элемента label связанного с .survey__radio */
-.survey__radio>span {
-  display: inline-flex;
-  align-items: center;
-  user-select: none;
-}
-/* создание в label псевдоэлемента before со следующими стилями */
-.survey__radio>span::before {
-  content: '';
-  display: inline-block;
+
+.radio__box {
+  position: absolute;
   width: 18px;
   height: 18px;
-  flex-shrink: 0;
-  flex-grow: 0;
-  border: 2px solid #000000;
-  border-radius: 50%;
-  margin-right: 19px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 16px;
+  margin-left: -36px;
+  margin-top: 3px;
 }
 
-.survey__radio_white>span::before {
-  border: 2px solid #fff;
+.radio__box_white {
+  background-image: url(../../images/survey/radioWhite.png);
 }
-
-/* стили при наведении курсора на радио */
-.survey__radio>input:hover+span:hover {
+.radio__box_black {
+  background-image: url(../../images/survey/radioBlack.png);
+}
+//checked
+.radio__input:checked + .radio__box {
+  background-image: url(../../images/survey/radioOrange.png);
+}
+//* стили при наведении курсора на radio */
+.radio:hover {
   opacity: 0.7;
   cursor: pointer;
-}
-/* стили для активной радиокнопки (при нажатии на неё) */
-.survey__radio>input:not(:disabled):active+span::before {
-  background: #FF6118;
-}
-/* стили для радиокнопки, находящейся в состоянии checked */
-.survey__radio>input:checked+span::before {
-  border-color: #FF6118;
-  background-color: #000000;
 }
 
 //Стилизация checkbox
-/* для элемента input c type="checkbox" */
-.survey__checkbox>input {
+.check {
+  padding-left: 36px;
+}
+
+.check__input {
   position: absolute;
-  z-index: -1;
-  opacity: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
-//* для элемента label, связанного с.survey__checkbox */
-.survey__checkbox>span {
-  display: inline-flex;
-  align-items: center;
-  user-select: none;
-}
-
-//* создание в label псевдоэлемента before со следующими стилями */
-.survey__checkbox>span::before {
-  content: '';
-  display: inline-block;
+.check__box {
+  position: absolute;
   width: 18px;
   height: 19px;
-  flex-shrink: 0;
-  flex-grow: 0;
-  border: 2px solid #FFFFFF;
-  margin-right: 19px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 50% 50%;
+  background-image: url(../../images/survey/checkMarkOff.png);
+  margin-left: -36px;
+  margin-top: 3px;
 }
-
-/* стили при наведении курсора на checkbox */
-.survey__checkbox>input:hover+span:hover {
+//checked
+.check__input:checked + .check__box {
+  height: 22px;
+  margin-top: 0;
+  background-image: url(../../images/survey/checkMarkOn.png);
+}
+//* стили при наведении курсора на checkbox */
+.check:hover {
   opacity: 0.7;
   cursor: pointer;
-}
-
-/* стили для активного чекбокса (при нажатии на него) */
-.survey__checkbox>input:not(:disabled):active+span::before {
-  background: #FF6118;
-}
-
-/* стили для чекбокса, находящегося в состоянии checked */
-.survey__checkbox>input:checked+span::before {
-  border-color: #FF6118;
-  background-color: #000000;
-
-  left: 5px;
-  top: -8px;
-  width: 13px;
-  height: 21px;
-  border: solid #FF6118;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
 }
 
 //Стилизация М Ж
