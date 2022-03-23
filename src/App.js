@@ -11,6 +11,7 @@ import Account from "./components/Account"
 
 import ModalWindow from "./components/modalWindow/ModalWindow";
 import {useState} from "react";
+import Survey from "./components/survey/Survey";
 
 function App(props) {
     const [isModal, setModal] = useState(false);
@@ -28,6 +29,7 @@ function App(props) {
                 <Route path="/workout" element={<Workout />} />
                 <Route path="/recipes" element={<Recipes />} />
                 <Route path="/contacts" element={<Contacts />} />
+                <Route path="/survey" element={<Survey />} />
                 <Route path="/account"
                        element={<Account
                                 name="Сергей"
