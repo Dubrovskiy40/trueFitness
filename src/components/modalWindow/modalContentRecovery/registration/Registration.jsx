@@ -1,14 +1,14 @@
 import state from '../modalContentRecovery.module.scss';
 import style from "../modalContentRecovery.module.scss";
 
-const Registration = ({state}) => {
+const Registration = (props) => {
     return (
         <>
-            <label className={style.modalContentRecovery__label} htmlFor="modalInp">{state[2].nameLabel1}
-                <input className={style.modalContentRecovery__inp} id="modalInp" name="" type="password" placeholder="******" />
+            <label className={style.modalContentRecovery__label} htmlFor="modalInp">Введите ваше Имя:
+                <input className={style.modalContentRecovery__inp} id="modalInp" name="" type="text" placeholder="Имя" />
             </label>
-            <label className={style.modalContentRecovery__label} htmlFor="modalInp">{state[2].nameLabel2}
-                <input className={style.modalContentRecovery__inp} id="modalInp" name="" type="password" placeholder="******" />
+            <label className={style.modalContentRecovery__label} htmlFor="modalInp">Введите номер телефона:
+                <input className={style.modalContentRecovery__inp} id="modalInp" name="" type="tel" placeholder="8-(999)-999-99-99" />
             </label>
         </>
     );

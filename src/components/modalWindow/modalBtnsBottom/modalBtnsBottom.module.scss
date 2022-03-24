@@ -1,0 +1,13 @@
+.modalBtnsBottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__btn {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 50px;
+    color: #000000;
+  }
+}

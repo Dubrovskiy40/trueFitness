@@ -14,7 +14,7 @@ import {useState} from "react";
 import Survey from "./components/survey/Survey";
 
 function App(props) {
-    const [isModal, setModal] = useState(false);
+    const [isModal, setModal] = useState(true);
     const onCloseWindow = () => setModal(false);
     const onOpenWindow = () => setModal(true);
 
@@ -42,7 +42,6 @@ function App(props) {
             {!['/account'].includes(window.location.pathname) && <Footer/>}
         </Router>
         <ModalWindow visible={isModal}
-            title='Восстановление пароля'
             onCloseWindow={onCloseWindow}
         />
     </div>

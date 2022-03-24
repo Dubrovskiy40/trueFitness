@@ -1,12 +1,12 @@
 import style from "../modalContentRecovery.module.scss";
 
-const CreatePassword = ({ state }) => {
+const CreatePassword = (props) => {
     return (
         <>
-            <label className={style.modalContentRecovery__label} htmlFor="modalInp">{state[2].nameLabel1}
+            <label className={style.modalContentRecovery__label} htmlFor="modalInp">Пароль:
                 <input className={style.modalContentRecovery__inp} id="modalInp" name="" type="password" placeholder="******" />
             </label>
-            <label className={style.modalContentRecovery__label} htmlFor="modalInp">{state[2].nameLabel2}
+            <label className={style.modalContentRecovery__label} htmlFor="modalInp">Повторите пароль:
                 <input className={style.modalContentRecovery__inp} id="modalInp" name="" type="password" placeholder="******" />
             </label>
         </>
