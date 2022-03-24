@@ -71,6 +71,13 @@
       "headingPosition": "heading--center",
       "link": "#",
       "id": "recipeImage5"
+    },
+    {
+      "backgroundImg": "recipesImg1.png",
+      "heading": "Салаты",
+      "headingPosition": "heading--center",
+      "link": "#",
+      "id": "recipeImage1"
     }
   ]
 }

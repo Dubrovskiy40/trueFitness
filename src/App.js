@@ -27,7 +27,7 @@ function App(props) {
             <Routes>
                 <Route exact path="/" element={<MainPage />} />
                 <Route path="/workout" element={<Workout />} />
-                <Route path="/recipes" element={<Recipes />} />
+                <Route path="/recipes" element={<Recipes link='recipesCarouselItems'/>} />
                 <Route path="/contacts" element={<Contacts />} />
                 <Route path="/survey" element={<Survey />} />
                 <Route path="/account"
