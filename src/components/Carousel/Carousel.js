@@ -3,6 +3,7 @@ import './carousel.css';
 import CarouselArrowLeft from '../CarouselArrows/CarouselArrowLeft';
 import CarouselArrowRight from '../CarouselArrows/CarouselArrowRight';
 import useFetch from '../useFetch/useFetch';
+import CardItem from "../CardItem";
 
 const CarouselComp = (props) => {
   const { data, isLoading, error } = useFetch('http://localhost:8000/' + props.link);
@@ -21,14 +22,7 @@ const CarouselComp = (props) => {
         leftArrow={<CarouselArrowLeft />}
         rightArrow={<CarouselArrowRight />}>
         {data.map((item) => (
-          <a target="_blank" href={item.link} key={item.id}>
-            <img
-              src={require("../../images/carousel/" + item.backgroundImg)}
-              className="carousel__item__img"
-              alt=""
-            />
-            <h3 className={"carousel__item__heading " + item.headingPosition}>{item.heading}</h3>
-          </a>
+            <CardItem item={item}/>
         ))}
       </Carousel>}
     </div >
