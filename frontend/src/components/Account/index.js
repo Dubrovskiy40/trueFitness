@@ -1,11 +1,8 @@
-import AccountNavbar from '../AccountNavbar/AccountNavbar'
 import style from './style.module.scss'
 
 export default ({ name, surname, age, imageSrc }) => {
     return (
         <div className={style['account-wrapper']}>
-            <AccountNavbar />
-
             <div className={style['user-info']}>
                 {imageSrc && <img
                     className={style.photo}
