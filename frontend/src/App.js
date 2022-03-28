@@ -25,21 +25,19 @@ function App(props) {
 
     const image = require('./images/users/1.png');
     console.log(window.location)
-<<<<<<< HEAD:frontend/src/App.js
-  return (
-    <div className="App">
-        <Router>
-            <Header />
-            <Routes>
-                <Route exact path="/" element={<MainPage />} />
-                <Route path="/workout" element={<Workout />} />
-                <Route path="/recipes" element={<Recipes link='recipesCarouselItems'/>} />
-                <Route path="/contacts" element={<Contacts />} />
-                <Route path="/survey" element={<Survey />} />
-                <Route path="/test" element={<TestRecipes />} />
-                <Route path="/account"
-                       element={<Account
-=======
+  // return (
+  //   <div className="App">
+  //       <Router>
+  //           <Header />
+  //           <Routes>
+  //               <Route exact path="/" element={<MainPage />} />
+  //               <Route path="/workout" element={<Workout />} />
+  //               <Route path="/recipes" element={<Recipes link='recipesCarouselItems'/>} />
+  //               <Route path="/contacts" element={<Contacts />} />
+  //               <Route path="/survey" element={<Survey />} />
+  //               <Route path="/test" element={<TestRecipes />} />
+  //               <Route path="/account"
+  //                      element={<Account
     return (
         <div className="App">
             <Router>
@@ -59,7 +57,6 @@ function App(props) {
                         />} />
                         <Route path="generalinfo"
                             element={<Account
->>>>>>> 7143b1752e84075f5fdad2920ee911d1067e6f8f:src/App.js
                                 name="Сергей"
                                 surname="Иванов"
                                 age={22}

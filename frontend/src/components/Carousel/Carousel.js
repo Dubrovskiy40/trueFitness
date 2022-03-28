@@ -21,8 +21,8 @@ const CarouselComp = (props) => {
         useArrowKeys={true}
         leftArrow={<CarouselArrowLeft />}
         rightArrow={<CarouselArrowRight />}>
-        {data.map((item) => (
-            <CardItem item={item}/>
+        {data.map((item, idx) => (
+            <CardItem item={item} key={idx}/>
         ))}
       </Carousel>}
     </div >
