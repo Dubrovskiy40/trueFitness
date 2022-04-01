@@ -32,8 +32,9 @@
   }
 
   &__top {
-    background: url(../../images/survey/survey-1.png) no-repeat 0 0,
-    #000 url(../../images/survey/survey-2.png) no-repeat 100% 0;
+    width: 100%;
+    background: url("../../images/survey/oneAndTwo.jpg") center / contain no-repeat #000;
+    background-size: auto;
     color: #ffffff;
     padding: 35px 0 20px;
   }
@@ -61,13 +62,13 @@
     font-size: 18px;
     line-height: 27px;
     text-align: center;
-    //padding: 3px 0;
-    //margin-left: 10px;
   }
 
   &__center {
-    background: url("../../images/survey/survey-3.png") no-repeat 0 0,
-    #fff url("../../images/survey/survey-4.png") no-repeat 100% 0;
+    width: 100%;
+    background: url("../../images/survey/survey-3.png") top / contain no-repeat,
+    #fff url("../../images/survey/survey-4.png") bottom / contain no-repeat;
+    background-size: auto;
     color: #000;
     padding: 20px 0 20px;
   }
@@ -99,7 +100,6 @@
     align-items: flex-start;
     margin-bottom: 37px;
     margin-left: 30px;
-    //position: relative;
 
     &_gender {
       flex-direction: row;

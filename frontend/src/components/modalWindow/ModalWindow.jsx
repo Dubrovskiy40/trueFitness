@@ -1,5 +1,5 @@
 import style from './modalWindow.module.scss';
-import ModalContentRecovery from "./modalContentRecovery/ModalContentRecovery";
+import ModalContent from "./modalContent/ModalContent";
 import {useEffect, useState} from "react";
 import ModalBtnsBottom from "./modalBtnsBottom/ModalBtnsBottom";
 
@@ -66,11 +66,9 @@ const ModalWindow = ({ visible, onCloseWindow }) => {
         <div className='modal' onClick={onCloseWindow}>
             <div className='modal__dialog' onClick={e => e.stopPropagation()}>
                 <h2 className={`modal__title  ${style.modalWindow__title}`}>Вход</h2>
-                <ModalContentRecovery handlerSubmit={handlerSubmit} phone={phone} password={password} setPhone={setPhone} setPassword={setPassword} isLink={isLink} path={"/account"} errorFlg={errorFlg} />
+                <ModalContent handlerSubmit={handlerSubmit} phone={phone} password={password} setPhone={setPhone} setPassword={setPassword} isLink={isLink} path={"/account"} errorFlg={errorFlg} />
                 {
-                    isFlag
-                        ? <ModalBtnsBottom />
-                        : null
+                    isFlag && <ModalBtnsBottom />
                 }
             </div>
         </div>

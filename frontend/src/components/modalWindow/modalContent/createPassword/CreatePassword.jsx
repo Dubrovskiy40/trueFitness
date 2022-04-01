@@ -1,4 +1,4 @@
-import style from "../modalContentRecovery.module.scss";
+import style from "../modalContent.module.scss";
 
 const CreatePassword = (props) => {
     return (

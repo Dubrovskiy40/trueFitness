@@ -1,4 +1,4 @@
-import style from './modalContentRecovery.module.scss';
+import style from './modalContent.module.scss';
 import ModalButton from "../modalButton/ModalButton";
 import Enter from "./enter/Enter";
 

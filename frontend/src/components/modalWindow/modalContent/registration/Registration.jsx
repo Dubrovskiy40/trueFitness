@@ -1,5 +1,4 @@
-import state from '../modalContentRecovery.module.scss';
-import style from "../modalContentRecovery.module.scss";
+import state from '../modalContent.module.scss';
 
 const Registration = (props) => {
     return (
