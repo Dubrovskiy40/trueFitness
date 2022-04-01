@@ -1,8 +1,16 @@
-.modalContentRecovery {
+.modalContent {
   text-align: left;
   white-space: normal;
   background-color: #fff;
   color: #000;
+
+  &__title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 80px;
+      color: #000000;
+  }
 
   &__form {
     text-align: left;

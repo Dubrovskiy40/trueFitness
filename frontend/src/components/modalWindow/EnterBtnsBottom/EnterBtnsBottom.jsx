@@ -1,6 +1,6 @@
-import style from './modalBtnsBottom.module.scss';
+import style from './EnterBtnsBottom.module.scss';
 
-const ModalBtnsBottom = () => {
+const EnterBtnsBottom = () => {
     return (
         <div className={style.modalBtnsBottom}>
             <a className={style.modalBtnsBottom__btn} href="#">Забыли пароль?</a>
@@ -9,4 +9,4 @@ const ModalBtnsBottom = () => {
     );
 };
 
-export default ModalBtnsBottom;
+export default EnterBtnsBottom;
