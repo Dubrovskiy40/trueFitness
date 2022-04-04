@@ -14,8 +14,8 @@ const CarouselComp = (props) => {
       <h2 className='carousel__title'>{props.slider}</h2>
       {error && <h5>{error}</h5>}
       {isLoading && <h5>Loading...</h5>}
-      {data && < Carousel
-        show={3.1}
+      {data && <Carousel
+        show={3.8}
         slide={2}
         swiping={true}
         useArrowKeys={true}

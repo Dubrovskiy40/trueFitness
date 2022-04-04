@@ -1,5 +1,4 @@
 .carousel__wrapper {
-  height: 90vh;
   margin: 50px 0;
 }
 .carousel__title {
@@ -31,7 +30,7 @@
 }
 .heading--center{
   text-align: center;
-  top: 50%;  
+  top: 50%;
   left: 50%;
   transform: translate(-70%, -50%)
 }
@@ -53,5 +52,5 @@
 .styles-module_item-container__a8zaY {
   position: relative;
   height: 400px;
-  margin-right: 40px;
 }
+

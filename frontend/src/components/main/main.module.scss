@@ -31,8 +31,11 @@
     color: #FFFFFF;
     text-align: left;
   }
-
   &__link {
-
+    transition: 0.1s;
+  }
+  &__link:hover {
+    border-bottom: 3px solid #FF6118;
+    color: #FF6118;
   }
 }
