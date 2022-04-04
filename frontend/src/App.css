@@ -57,8 +57,8 @@
 
 .modal__dialog {
   width: 476px;
-  height: 447px;
-  padding: 19px 50px 0 44px;
+  /*height: 447px;*/
+  padding: 19px 50px 59px 44px;
   background: #fff;
   position: relative;
   margin: 0 20px;
