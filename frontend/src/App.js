@@ -25,19 +25,19 @@ function App(props) {
 
     const image = require('./images/users/1.png');
     console.log(window.location)
-  // return (
-  //   <div className="App">
-  //       <Router>
-  //           <Header />
-  //           <Routes>
-  //               <Route exact path="/" element={<MainPage />} />
-  //               <Route path="/workout" element={<Workout />} />
-  //               <Route path="/recipes" element={<Recipes link='recipesCarouselItems'/>} />
-  //               <Route path="/contacts" element={<Contacts />} />
-  //               <Route path="/survey" element={<Survey />} />
-  //               <Route path="/test" element={<TestRecipes />} />
-  //               <Route path="/account"
-  //                      element={<Account
+    // return (
+    //   <div className="App">
+    //       <Router>
+    //           <Header />
+    //           <Routes>
+    //               <Route exact path="/" element={<MainPage />} />
+    //               <Route path="/workout" element={<Workout />} />
+    //               <Route path="/recipes" element={<Recipes link='recipesCarouselItems'/>} />
+    //               <Route path="/contacts" element={<Contacts />} />
+    //               <Route path="/survey" element={<Survey />} />
+    //               <Route path="/test" element={<TestRecipes />} />
+    //               <Route path="/account"
+    //                      element={<Account
     return (
         <div className="App">
             <Router>
@@ -68,7 +68,7 @@ function App(props) {
                     </Route>
                     <Route path="*" element={<Error />} />
                 </Routes>
-                {!['/account'].includes(window.location.pathname) && <Footer />}
+                {/* {!['/account'].includes(window.location.pathname) && <Footer />} */}
             </Router>
             <ModalWindow visible={isModal}
                 onCloseWindow={onCloseWindow}

@@ -1,5 +1,4 @@
 import style from './style.module.scss'
-import AccountNavbar from "../AccountNavbar/AccountNavbar";
 
 export default ({ name, surname, age, imageSrc }) => {
     return (

@@ -1,6 +1,7 @@
 import style from './survey.module.scss';
 import '../../styles/style.scss'
-import {useState} from "react";
+import { useState } from "react";
+import Footer from '../footer/Footer';
 
 const Survey = () => {
     const [age, setAge] = useState('18');
@@ -122,7 +123,7 @@ const Survey = () => {
                             </div>
                             <div className={`${style.survey__wrap1} ${checked ? style.block__disabled : ''}`}>
                                 <div className={style.survey__subtitle}>
-                                    <h3>Желаемый<br/> Вес:</h3>
+                                    <h3>Желаемый<br /> Вес:</h3>
                                 </div>
                                 <div className={style.survey__item}>
                                     <div className={style.range}>
@@ -135,7 +136,7 @@ const Survey = () => {
                             </div>
                             <div className={`${style.survey__wrap1} ${checked ? style.block__disabled : ''}`}>
                                 <div className={style.survey__subtitle}>
-                                    <h3>Период<br/> тренировок<br/> (дней):</h3>
+                                    <h3>Период<br /> тренировок<br /> (дней):</h3>
                                 </div>
                                 <div className={style.survey__item}>
                                     <div className={style.range}>
@@ -148,7 +149,7 @@ const Survey = () => {
                             </div>
                             <div className={style.survey__wrap1}>
                                 <div className={style.survey__subtitle}>
-                                    <h3 >Ваш Уровень<br/> Активности:</h3>
+                                    <h3 >Ваш Уровень<br /> Активности:</h3>
                                 </div>
                                 <div className={style.survey__item}>
                                     <label className={style.radio} htmlFor="active1">
@@ -249,7 +250,7 @@ const Survey = () => {
                             </div>
                             <div className={style.survey__wrap1}>
                                 <div className={style.survey__subtitle}>
-                                    <h3>Потребление<br/> воды в день:</h3>
+                                    <h3>Потребление<br /> воды в день:</h3>
                                 </div>
                                 <div className={style.survey__item}>
                                     <label className={style.radio} htmlFor="water1">
@@ -279,6 +280,7 @@ const Survey = () => {
                     </div>
                 </div>
             </form>
+            <Footer />
         </div>
     );
 };
