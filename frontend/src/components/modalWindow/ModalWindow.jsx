@@ -2,11 +2,10 @@ import style from './modalWindow.module.scss';
 import ModalContent from "./modalContent/ModalContent";
 import {useEffect, useState} from "react";
 
-
 import {useDispatch, useSelector} from "react-redux";
 import {fetchUser} from "../../actions/userAction";
 
-const ModalWindow = ({ visible, onCloseWindow }) => {
+const ModalWindow = ({ visible, onCloseWindow, onOpenWindow }) => {
     const [phone, setPhone] = useState("");
     const [password, setPassword] = useState("");
     const [errorFlg, setErrorFlg] = useState(false);
@@ -56,15 +55,7 @@ const ModalWindow = ({ visible, onCloseWindow }) => {
     return (
         <div className='modal' onClick={onCloseWindow}>
             <div className='modal__dialog' onClick={e => e.stopPropagation()}>
-                <ModalContent />
-                {/*<h2 className={`modal__title  ${style.modalWindow__title}`}>Вход</h2>*/}
-                {/*<ModalContent handlerSubmit={handlerSubmit} phone={phone} */}
-                {/*              password={password} setPhone={setPhone} */}
-                {/*              setPassword={setPassword} isLink={isLink} */}
-                {/*              path={"/account"} errorFlg={errorFlg} />*/}
-                {/*{*/}
-                {/*    isFlag && <EnterBtnsBottom />*/}
-                {/*}*/}
+                <ModalContent onOpenWindow={onOpenWindow} />
             </div>
         </div>
     );
