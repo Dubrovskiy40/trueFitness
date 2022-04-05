@@ -7,11 +7,11 @@ import Error from "./components/Error"
 import Recipes from "./components/Recipes"
 import Contacts from "./components/Contacts"
 import Workout from "./components/Workout"
-import Account from "./components/Account"
-import AccountNavbar from './components/AccountNavbar/AccountNavbar';
-import AccountTarget from "./components/AccountTarget/index";
-import AccountAchievments from "./components/AccountAchievments/index";
-import AccountFavorites from "./components/AccountFavorites/index";
+import Account from "./components/Account/AccountGeneral"
+import AccountNavbar from './components/Account/AccountNavbar/AccountNavbar';
+import AccountTarget from "./components/Account/AccountTarget/index";
+import AccountAchievments from "./components/Account/AccountAchievments/index";
+import AccountFavorites from "./components/Account/AccountFavorites/index";
 
 import ModalWindow from "./components/modalWindow/ModalWindow";
 import { useState } from "react";
@@ -50,16 +50,10 @@ function App(props) {
                     <Route path="/survey" element={<Survey />} />
                     <Route path="/account" element={<AccountNavbar />}>
                         <Route index element={<Account
-                            name="Сергей"
-                            surname="Иванов"
-                            age={22}
                             imageSrc={image}
                         />} />
                         <Route path="generalinfo"
                             element={<Account
-                                name="Сергей"
-                                surname="Иванов"
-                                age={22}
                                 imageSrc={image}
                             />} />
                         <Route path="target" element={<AccountTarget />} />

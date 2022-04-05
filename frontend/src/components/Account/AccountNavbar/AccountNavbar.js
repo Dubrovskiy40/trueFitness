@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
-import Footer from '../footer/Footer';
 import style from './style.module.scss'
 
 
@@ -23,7 +22,6 @@ const AccountNavbar = () => {
               className={setActive}
               to={item.link}>
               {item.linkHeading}
-              {/* <div className={style.account__navbar_triangle}></div> */}
             </NavLink>
           </li>
         ))}

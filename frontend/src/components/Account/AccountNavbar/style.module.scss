@@ -16,10 +16,10 @@
     background-color: transparent;
   }
   &_link {
+    padding-left: 130px;
     display: inline-block;
     color: white;
     position: relative;
-    padding-left: 130px;
     &::after {
       content: '';
       position: absolute;

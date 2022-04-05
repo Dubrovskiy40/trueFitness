@@ -1,0 +1,97 @@
+.account-wrapper {
+    display: flex;
+    flex-flow: column;
+    height: calc(100vh - 95px);
+}
+
+.user-info {
+    display: flex;
+    max-width: 1140px;
+    padding: 0 80px;
+    margin: 20px auto 0;
+}
+
+.photo {
+    width: 378px;
+    height: 378px;
+    border-radius: 50%;
+    display: block;
+    &:hover {
+        opacity: 50%;
+    }
+    &:hover + .user_edit_image {
+        display: block;
+    }
+}
+
+.user-name {
+    font-size: 36px;
+    line-height: 80px;
+    font-weight: bold;
+}
+
+.footer {
+    width: 100%;
+    min-height: 300px;
+    background: #000;
+    margin-top: auto;
+    display: flex;
+
+    .user-name {
+        display: block;
+        margin-top: auto;
+        color: #fff;
+        margin-left: 30%;
+    }
+}
+
+.user {
+    &__data {
+        width: 360px;
+    }
+    &_image { 
+        position: relative; 
+        margin-right: 90px;
+    }
+    &_edit_image {
+        display: none;
+        cursor: pointer;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 80px;
+        color: #3D3D3D;
+        background: none;
+        white-space: nowrap;
+        &:hover {
+            display: block;
+        }
+        &:hover + .photo {
+            opacity: 50%;
+        }
+    }
+    &_input_wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    &_label {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 80px;
+    }
+    &_input {
+        border-bottom: 2px solid #000;
+        max-width: 244px;
+        font-size: 24px;
+        font-weight: 400;
+        padding-left: 8px;
+        &:focus {
+            outline: none;
+        }
+    }
+}
