@@ -23,6 +23,7 @@ const AccountNavbar = () => {
               className={setActive}
               to={item.link}>
               {item.linkHeading}
+              {/* <div className={style.account__navbar_triangle}></div> */}
             </NavLink>
           </li>
         ))}
