@@ -1,10 +1,10 @@
 import style from './EnterBtnsBottom.module.scss';
 
-const EnterBtnsBottom = () => {
+const EnterBtnsBottom = ({ setCurrentModalWindow }) => {
     return (
         <div className={style.modalBtnsBottom}>
-            <a className={style.modalBtnsBottom__btn} href="#">Забыли пароль?</a>
-            <a className={style.modalBtnsBottom__btn} href="#">Регистрация</a>
+            <button className={style.modalBtnsBottom__btn} onClick={() => setCurrentModalWindow(2)} >Забыли пароль?</button>
+            <button className={style.modalBtnsBottom__btn} onClick={() => setCurrentModalWindow(5)} >Регистрация</button>
         </div>
     );
 };

@@ -2,7 +2,7 @@ import style from '../modalContent.module.scss';
 import ModalButton from "../../modalButton/ModalButton";
 import EnterBtnsBottom from "../../EnterBtnsBottom/EnterBtnsBottom";
 
-const Enter = ({ phone, password, setPhone, setPassword, handlerSubmit, isLink, path }) => {
+const Enter = ({ phone, password, setPhone, setPassword, handlerSubmit, isLink, path, setCurrentModalWindow }) => {
     return (
         <>
             <h2 className={style.modalContent__title}>Вход</h2>
@@ -15,7 +15,7 @@ const Enter = ({ phone, password, setPhone, setPassword, handlerSubmit, isLink, 
                 </label>
                 <ModalButton nameBtn={"Войти"} isLink={isLink} path={path} />
             </form>
-            <EnterBtnsBottom />
+            <EnterBtnsBottom setCurrentModalWindow={setCurrentModalWindow} />
         </>
     );
 };

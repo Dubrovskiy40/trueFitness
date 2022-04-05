@@ -66,6 +66,7 @@ function App(props) {
             </Router>
             <ModalWindow visible={isModal}
                 onCloseWindow={onCloseWindow}
+                onOpenWindow={onOpenWindow}
             />
         </div>
     );
