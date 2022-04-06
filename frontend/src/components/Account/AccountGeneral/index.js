@@ -14,36 +14,44 @@ export default ({ imageSrc }) => {
         }
     )
 
+    const [generalInfoInputs, setGeneralInfoInputs] = useState([
+        { labelText: 'Логин:', inputId: 'user__login', inputType: 'text', defaultValue: `${userData.userLogin}` },
+        { labelText: 'Пароль:', inputId: 'user__password', inputType: 'password', defaultValue: `${userData.userPassword}` },
+        { labelText: 'Email:', inputId: 'user__email', inputType: 'email', defaultValue: `${userData.userEmail}` },
+        { labelText: 'Телефон:', inputId: 'user__phone-number', inputType: 'text', defaultValue: `${userData.userPhoneNumber}` }
+    ])
+
+    const editGeneralInfo = (e) => {
+        e.preventDefault();
+        console.log('Edit general info')
+    }
+
 
     return (
         <div className={style['account-wrapper']}>
             <div className={style['user-info']}>
-                <div className={style.user_image_wrapper}>
+                <div className={style['user__image-wrapper']}>
                     {imageSrc && <img
-                        className={style.image}
+                        className={style.user__image}
                         src={imageSrc}
                         alt="фото пользователя" />}
-                    <button className={style.user_edit_image_btn}>Редактировать фото</button>
+                    <button className={style['user__image-edit-btn']}>Редактировать фото</button>
                 </div>
-                <div className={style.user__data}>
+                <form className={style.user__form}>
                     <h3 className={style['user-name']}>{userData.userSurname} {userData.userName}, {userData.userAge}</h3>
-                    <div className={style.user_input_wrapper}>
-                        <label className={style.user_label} for="user__login">Логин:</label>
-                        <input className={style.user_input} type="text" id="user__login" defaultValue={userData.userLogin}></input>
-                    </div>
-                    <div className={style.user_input_wrapper}>
-                        <label className={style.user_label} for="user__password">Пароль:</label>
-                        <input className={style.user_input} type="password" id="user__password" defaultValue={userData.userPassword}></input>
-                    </div>
-                    <div className={style.user_input_wrapper}>
-                        <label className={style.user_label} for="user__email">E-mail:</label>
-                        <input className={style.user_input} type="email" id="user__email" defaultValue={userData.userEmail}></input>
-                    </div>
-                    <div className={style.user_input_wrapper}>
-                        <label className={style.user_label} for="user__phone-number">Логин</label>
-                        <input className={style.user_input} type="text" id="user__phone-number" defaultValue={userData.userPhoneNumber}></input>
-                    </div>
-                </div>
+                    {generalInfoInputs.map((item) => (
+                        <div className={style['user__input-wrapper']} key={item.inputId}>
+                            <label className={style['user__input-label']} for={item.inputId}>{item.labelText}</label>
+                            <input className={style['user__input-field']} type={item.inputType} id={item.inputId} defaultValue={item.defaultValue}></input>
+                        </div>
+                    ))}
+                    <button
+                        className={`button ${style['user__form-submit-btn']}`}
+                        type="submit"
+                        onClick={editGeneralInfo}>
+                        Редактировать данные
+                    </button>
+                </form>
             </div>
         </div >
 
