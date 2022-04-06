@@ -18,30 +18,30 @@ export default ({ imageSrc }) => {
     return (
         <div className={style['account-wrapper']}>
             <div className={style['user-info']}>
-                <div className={style.user_image}>
+                <div className={style.user_image_wrapper}>
                     {imageSrc && <img
-                        className={style.photo}
+                        className={style.image}
                         src={imageSrc}
                         alt="фото пользователя" />}
-                    <button className={style.user_edit_image}>Редактировать фото</button>
+                    <button className={style.user_edit_image_btn}>Редактировать фото</button>
                 </div>
                 <div className={style.user__data}>
                     <h3 className={style['user-name']}>{userData.userSurname} {userData.userName}, {userData.userAge}</h3>
                     <div className={style.user_input_wrapper}>
                         <label className={style.user_label} for="user__login">Логин:</label>
-                        <input className={style.user_input} type="text" id="user__login" value={userData.userLogin}></input>
+                        <input className={style.user_input} type="text" id="user__login" defaultValue={userData.userLogin}></input>
                     </div>
                     <div className={style.user_input_wrapper}>
                         <label className={style.user_label} for="user__password">Пароль:</label>
-                        <input className={style.user_input} type="password" id="user__password" value={userData.userPassword}></input>
+                        <input className={style.user_input} type="password" id="user__password" defaultValue={userData.userPassword}></input>
                     </div>
                     <div className={style.user_input_wrapper}>
                         <label className={style.user_label} for="user__email">E-mail:</label>
-                        <input className={style.user_input} type="email" id="user__email" value={userData.userEmail}></input>
+                        <input className={style.user_input} type="email" id="user__email" defaultValue={userData.userEmail}></input>
                     </div>
                     <div className={style.user_input_wrapper}>
                         <label className={style.user_label} for="user__phone-number">Логин</label>
-                        <input className={style.user_input} type="text" id="user__phone-number" value={userData.userPhoneNumber}></input>
+                        <input className={style.user_input} type="text" id="user__phone-number" defaultValue={userData.userPhoneNumber}></input>
                     </div>
                 </div>
             </div>

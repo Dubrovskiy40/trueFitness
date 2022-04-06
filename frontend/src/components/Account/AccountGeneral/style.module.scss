@@ -9,19 +9,7 @@
     max-width: 1140px;
     padding: 0 80px;
     margin: 20px auto 0;
-}
-
-.photo {
-    width: 378px;
-    height: 378px;
-    border-radius: 50%;
-    display: block;
-    &:hover {
-        opacity: 50%;
-    }
-    &:hover + .user_edit_image {
-        display: block;
-    }
+    align-items: center;
 }
 
 .user-name {
@@ -49,29 +37,39 @@
     &__data {
         width: 360px;
     }
-    &_image { 
-        position: relative; 
+    &_image_wrapper { 
         margin-right: 90px;
+        border-radius: 100%;
+        display: flex;
+        flex: 0 0 378px;
+        height: 378px;
+        width: 378px;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
     }
-    &_edit_image {
-        display: none;
-        cursor: pointer;
+    &_image {
+        height: 100%;
+    }
+    &_edit_image_btn {
+        align-items: center;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        left: 0;
+        opacity: 0;
         position: absolute;
-        text-align: center;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        right: 0;
+        top: 0;
+        transition: opacity 0.25s;
+        z-index: 1;
         font-weight: 700;
         font-size: 24px;
         line-height: 80px;
         color: #3D3D3D;
-        background: none;
-        white-space: nowrap;
+        background-color: rgba(196, 196, 196, 0.5);
         &:hover {
-            display: block;
-        }
-        &:hover + .photo {
-            opacity: 50%;
+            opacity: 1;
         }
     }
     &_input_wrapper {

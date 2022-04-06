@@ -17,7 +17,7 @@ const AccountNavbar = () => {
     <nav className={style.account__navbar_wrapper}>
       <ul className={style.account__navbar}>
         {accountLinks.map((item) => (
-          <li className={style.account__navbar_item}>
+          <li className={style.account__navbar_item} key={item.link}>
             <NavLink
               className={setActive}
               to={item.link}>
