@@ -1,18 +1,9 @@
 import { useState } from 'react'
+import { useSelector } from 'react-redux'
 import style from './style.module.scss'
 
 export default ({ imageSrc }) => {
-    const [userData, setuserData] = useState(
-        {
-            userName: 'Сергей',
-            userSurname: 'Иванов',
-            userAge: '22',
-            userLogin: 'IvanovSergey22',
-            userPassword: '******',
-            userEmail: 'IvanovSergey22@mail.ru',
-            userPhoneNumber: '8-(999)-999-99-99'
-        }
-    )
+    const [userData, setuserData] = useState((useSelector((state) => (state.userData))))
 
     const [generalInfoInputs, setGeneralInfoInputs] = useState([
         { labelText: 'Логин:', inputId: 'user__login', inputType: 'text', defaultValue: `${userData.userLogin}` },
@@ -25,7 +16,6 @@ export default ({ imageSrc }) => {
         e.preventDefault();
         console.log('Edit general info')
     }
-
 
     return (
         <div className={style['account-wrapper']}>
