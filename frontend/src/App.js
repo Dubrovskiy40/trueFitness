@@ -1,5 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {useState} from "react";
+
 import Footer from "./components/footer/Footer";
 import Header from "./components/header";
 import MainPage from "./components/MainPage"
@@ -12,9 +14,7 @@ import AccountNavbar from './components/Account/AccountNavbar/AccountNavbar';
 import AccountTarget from "./components/Account/AccountTarget/index";
 import AccountAchievments from "./components/Account/AccountAchievments/index";
 import AccountFavorites from "./components/Account/AccountFavorites/index";
-
 import ModalWindow from "./components/modalWindow/ModalWindow";
-import { useState } from "react";
 import Survey from "./components/survey/Survey";
 import TestRecipes from "./components/testRecipies/TestRecipes";
 

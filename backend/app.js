@@ -17,7 +17,7 @@ const recipes = [
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors());
-app.use(logger("dev"));
+app.use(logger("dev")); // мидвар, который позволяет выводить все логи в консоль
 
 app.post("/auth", (req, res) => {
     const { phone, password } = req.body;

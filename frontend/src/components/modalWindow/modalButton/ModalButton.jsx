@@ -1,20 +1,15 @@
 import style from './modalButton.module.scss';
 import {NavLink} from "react-router-dom";
 
-const ModalButton = ({ nameBtn, isLink, path, handleClick = () => {}, handleChangeFlag}) => {
+const ModalButton = ({ nameBtn, isLink, path}) => {
     console.log('path', path)
-
-    const multiFunc = (e) => {
-        handleClick();
-        handleChangeFlag(e);
-    };
 
     return (
         isLink
-            ? <NavLink className={style.modalButton__btn} to={path} onClick={multiFunc}>Вход</NavLink>
+            ? <NavLink className={style.modalButton__btn} to={path} >Вход</NavLink>
             :
             <div className={style.modalButton}>
-                <button type="submit" className={style.modalButton__btn} onClick={multiFunc}>{nameBtn}</button>
+                <button type="submit" className={style.modalButton__btn} >{nameBtn}</button>
             </div>
     );
 };

@@ -1,17 +1,18 @@
 import style from './modalWindow.module.scss';
 import ModalContent from "./modalContent/ModalContent";
 import {useEffect, useState} from "react";
-
 import {useDispatch, useSelector} from "react-redux";
+// import { useNavigate } from "react-router-dom";
 import {fetchUser} from "../../actions/userAction";
 
 const ModalWindow = ({ visible, onCloseWindow, onOpenWindow }) => {
     const [phone, setPhone] = useState("");
     const [password, setPassword] = useState("");
     const [errorFlg, setErrorFlg] = useState(false);
-    const dispatch = useDispatch();
     const [isLink, setIsLink] = useState(false);
-
+    const dispatch = useDispatch();
+    // const navigate = useNavigate();
+    //
     const { error, user } = useSelector((state) => state.user);
 
     useEffect(() => {
@@ -22,13 +23,14 @@ const ModalWindow = ({ visible, onCloseWindow, onOpenWindow }) => {
         }
     }, [error]);
 
-    useEffect(() => {
-        if (user) {
-            setIsLink(true);
-        }
-    }, [user]);
+    // useEffect(() => {
+    //     if (user) {
+    //         return <navigate to="/account"/>
+    //     }
+    // }, [user]);
 
     const handlerSubmit = (e) => {
+        console.log('форма отправлена');
         e.preventDefault();
         setErrorFlg(false);
         dispatch(fetchUser({ phone, password }));
@@ -55,7 +57,7 @@ const ModalWindow = ({ visible, onCloseWindow, onOpenWindow }) => {
     return (
         <div className='modal' onClick={onCloseWindow}>
             <div className='modal__dialog' onClick={e => e.stopPropagation()}>
-                <ModalContent onOpenWindow={onOpenWindow} />
+                <ModalContent errorLogin={error} handlerSubmit={handlerSubmit} phone={phone} setPhone={setPhone} password={password} setPassword={setPassword}/>
             </div>
         </div>
     );
