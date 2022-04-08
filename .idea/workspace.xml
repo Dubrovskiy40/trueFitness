@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54239e83-4a7d-4cc1-8a07-7bbad2da99bb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/project.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/footer/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/footer/footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/footer/footer.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/modalWindow/ModalWindow.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/modalWindow/ModalWindow.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/modalWindow/modalButton/ModalButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/modalWindow/modalButton/ModalButton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/modalWindow/modalContent/ModalContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/modalWindow/modalContent/ModalContent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/modalWindow/modalContent/enter/Enter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/modalWindow/modalContent/enter/Enter.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/modalWindow/modalContent/modalContent.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/modalWindow/modalContent/modalContent.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/images/footer/socialNetwork.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +56,9 @@
       <workItem from="1649315563936" duration="2888000" />
       <workItem from="1649318803878" duration="95000" />
       <workItem from="1649318928982" duration="8145000" />
+      <workItem from="1649433652543" duration="937000" />
+      <workItem from="1649446536079" duration="6131000" />
+      <workItem from="1649453055975" duration="923000" />
     </task>
     <servers />
   </component>
