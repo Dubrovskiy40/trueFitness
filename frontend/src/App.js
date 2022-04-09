@@ -64,6 +64,7 @@ function App(props) {
                 </Routes>
                 {/* {!['/account'].includes(window.location.pathname) && <Footer />} */}
             </Router>
+            <TestRecipes/>
             <ModalWindow visible={isModal}
                 onCloseWindow={onCloseWindow}
                 onOpenWindow={onOpenWindow}

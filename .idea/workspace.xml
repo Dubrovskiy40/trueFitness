@@ -4,6 +4,23 @@
     <list default="true" id="54239e83-4a7d-4cc1-8a07-7bbad2da99bb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/img/recipe/weightDown/firstCourse/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/img/recipe/weightDown/firstCourse/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/img/recipe/weightDown/firstCourse/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/img/recipe/weightDown/firstCourse/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/img/recipe/weightDown/firstCourse/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/img/recipe/weightDown/firstCourse/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/img/recipe/weightUp/firstCourse/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/img/recipe/weightUp/firstCourse/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/img/recipe/weightUp/firstCourse/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/img/recipe/weightUp/firstCourse/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/img/recipe/weightUp/firstCourse/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/img/recipe/weightUp/firstCourse/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Recipes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Recipes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/testRecipies/TestRecipes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/testRecipies/TestRecipes.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/testRecipies/testRecipies.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/testRecipies/testRecipies.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/types/foodTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/types/foodTypes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +75,8 @@
       <workItem from="1649318928982" duration="8145000" />
       <workItem from="1649433652543" duration="937000" />
       <workItem from="1649446536079" duration="6131000" />
-      <workItem from="1649453055975" duration="923000" />
+      <workItem from="1649453055975" duration="1368000" />
+      <workItem from="1649484457142" duration="3747000" />
     </task>
     <servers />
   </component>
