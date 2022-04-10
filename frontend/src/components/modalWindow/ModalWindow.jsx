@@ -1,19 +1,21 @@
 import style from './modalWindow.module.scss';
 import ModalContent from "./modalContent/ModalContent";
 import {useEffect, useState} from "react";
+import { useNavigate  } from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 // import { useNavigate } from "react-router-dom";
-import {fetchUser} from "../../actions/userAction";
+import {userLogin} from "../../actions/userAction";
+import auth from "../../api/auth";
 
 const ModalWindow = ({ visible, onCloseWindow, onOpenWindow }) => {
     const [phone, setPhone] = useState("");
     const [password, setPassword] = useState("");
     const [errorFlg, setErrorFlg] = useState(false);
     const [isLink, setIsLink] = useState(false);
+    const [error, setError] = useState(false);
     const dispatch = useDispatch();
-    // const navigate = useNavigate();
-    //
-    const { error, user } = useSelector((state) => state.user);
+    const navigate = useNavigate();
+    // const { error, user } = useSelector((state) => state.user);
 
     useEffect(() => {
         if (error) {
@@ -29,11 +31,20 @@ const ModalWindow = ({ visible, onCloseWindow, onOpenWindow }) => {
     //     }
     // }, [user]);
 
-    const handlerSubmit = (e) => {
-        console.log('форма отправлена');
+    const handlerSubmit = async (e) => {
         e.preventDefault();
         setErrorFlg(false);
-        dispatch(fetchUser({ phone, password }));
+        try {
+            const user = await auth.getUser(phone, password)
+            dispatch(userLogin(user))
+            onCloseWindow()
+            navigate('/account')
+        } catch (err) {
+            console.log(err)
+            setError('User not found')
+        }
+
+        // dispatch(fetchUser({ phone, password }));
     };
 
     const [isFlag, setIsFlag] = useState(false);

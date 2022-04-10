@@ -63,12 +63,13 @@ function App(props) {
                     <Route path="*" element={<Error />} />
                 </Routes>
                 {/* {!['/account'].includes(window.location.pathname) && <Footer />} */}
+                <ModalWindow visible={isModal}
+                             onCloseWindow={onCloseWindow}
+                             onOpenWindow={onOpenWindow}
+                />
             </Router>
             <TestRecipes/>
-            <ModalWindow visible={isModal}
-                onCloseWindow={onCloseWindow}
-                onOpenWindow={onOpenWindow}
-            />
+
         </div>
     );
 }

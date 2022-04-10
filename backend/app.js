@@ -4,7 +4,7 @@ const logger = require('morgan');
 const cors = require("cors");
 
 const users = [
-    { phone: "89999999999", password: "123456" },
+    { phone: "89999999999", password: "123456", name: "Иван" },
     { phone: "81111111111", password: "654321" },
 ];
 
