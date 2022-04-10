@@ -16,7 +16,6 @@ import AccountAchievments from "./components/Account/AccountAchievments/index";
 import AccountFavorites from "./components/Account/AccountFavorites/index";
 import ModalWindow from "./components/modalWindow/ModalWindow";
 import Survey from "./components/survey/Survey";
-import TestRecipes from "./components/testRecipies/TestRecipes";
 
 function App(props) {
     const [isModal, setModal] = useState(true);
@@ -68,8 +67,6 @@ function App(props) {
                              onOpenWindow={onOpenWindow}
                 />
             </Router>
-            <TestRecipes/>
-
         </div>
     );
 }
