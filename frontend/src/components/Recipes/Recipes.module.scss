@@ -1,7 +1,50 @@
-.recipes__cards {
+//.recipes__cards {
+//  max-width: 1140px;
+//  margin: 65px auto 0 auto;
+//  display: flex;
+//  flex-wrap: wrap;
+//  justify-content: space-between;
+//}
+
+.recipes {
   max-width: 1140px;
   margin: 65px auto 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+
+  &__item {
+    width: 300px;
+    height: 402px;
+    margin-bottom: 65px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 53px;
+    color: #FFFFFF;
+  }
+}
+.item1 {
+  background: url('../../images/recipe/salads.png') right / contain no-repeat #000;
+}
+.item2 {
+  background: url('../../images/recipe/firstCourse.png') right / contain no-repeat #000;
+}
+.item3 {
+  background: url('../../images/recipe/secondCourse.png') right / contain no-repeat #000;
+}
+.item4 {
+  background: url('../../images/recipe/desserts.png') right / contain no-repeat #000;
 }
