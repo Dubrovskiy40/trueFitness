@@ -1,31 +1,59 @@
 .form_target {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
   &_button {
-    max-width: 447px;
+    width: 100%;
+  }
+  &_item {
+    margin-bottom: 34px;
+    display: flex;
+    align-items: center;
+
+    font-family: 'Oswald';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: #000000;
+    &_select {
+      font-family: inherit;
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      color: inherit;
+      margin-left: 35px;
+    }
   }
 }
 
+.form__wrap {
+  margin-top: 64px;
+  margin-bottom: 43px;
+}
+
+.range_subtitle {
+  max-width: 77px;
+  display: flex;
+  text-align: left;
+}
 .survey__item {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 37px;
   margin-left: 30px;
 }
 
 .range {
   display: flex;
   justify-content: space-between;
-
   &__span {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     text-align: center;
-    color: rgba(255, 255, 255, 0.4);
-
     &_black {
       color: rgba(0, 0, 0, 0.4);
     }
@@ -38,11 +66,6 @@
   &__spanMax {
     margin-left: 9px;
   }
-}
-
-.span__range {
-  margin: 0 auto;
-  margin-top: 8px;
 }
 
 .survey__inpRange {
@@ -67,15 +90,6 @@
   &:hover {
     opacity: 0.7;
     cursor: pointer;
-  }
-}
-
-.survey__inpRange_white {
-  background-color: #000;
-
-  &::-webkit-slider-runnable-track {
-    height: 1px;
-    border: 2px solid #FFFFFF;
   }
 }
 
