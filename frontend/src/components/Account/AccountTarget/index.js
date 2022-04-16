@@ -1,18 +1,27 @@
 import style from "./index.module.scss";
 import { useEffect, useState } from "react";
 import Footer from '../../footer/Footer';
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const AccountTarget = () => {
     const [mainTarget, setMainTarget] = useState("Сохранение моего нынешнего веса");
     const [desiredWeight, setDesiredWeight] = useState(75);
     const [trainingRange, setTrainingRange] = useState(30);
 
+    const surveyData = useSelector((state) => (state.surveyDataReducer));
+
+    const dispatch = useDispatch();
+
     const submitHandler = (e) => {
         e.preventDefault();
         console.log(mainTarget, desiredWeight, trainingRange);
     }
 
+    useEffect(() => {
+        setMainTarget(surveyData.userMainTarget)
+        setDesiredWeight(surveyData.userTargetWeight);
+        setTrainingRange(surveyData.trainingPeriod);
+    }, [surveyData])
 
     return (
         <div>
