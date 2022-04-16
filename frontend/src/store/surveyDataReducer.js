@@ -1,6 +1,13 @@
 import { SAVE_SURVEY_DATA, SET_SURVEY_DATA } from "./types/surveyTypes";
 
-const initialState = null;
+const initialState = {
+  userAge: 0,
+  userWeight: 0,
+  userHeight: 0,
+  userTargetWeight: 0,
+  trainingPeriod: 0,
+  userMainTarget: ''
+};
 
 const surveyDataReducer = (state = initialState, { type, payload }) => {
   switch (type) {
