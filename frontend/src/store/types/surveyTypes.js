@@ -1,0 +1,2 @@
+export const SAVE_SURVEY_DATA = "SAVE_SURVEY_DATA";
+export const SET_SURVEY_DATA = "SET_SURVEY_DATA";
