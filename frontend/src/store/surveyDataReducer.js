@@ -5,7 +5,7 @@ const initialState = {
   userWeight: 0,
   userHeight: 0,
   userTargetWeight: 0,
-  trainingPeriod: 0,
+  trainingPeriod: 21,
   userMainTarget: ''
 };
 

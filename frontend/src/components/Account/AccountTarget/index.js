@@ -2,20 +2,16 @@ import style from "./index.module.scss";
 import { useEffect, useState } from "react";
 import Footer from '../../footer/Footer';
 import { useDispatch, useSelector } from "react-redux";
+import { SAVE_SURVEY_DATA } from "../../../store/types/surveyTypes";
 
 const AccountTarget = () => {
     const [mainTarget, setMainTarget] = useState("Сохранение моего нынешнего веса");
-    const [desiredWeight, setDesiredWeight] = useState(75);
-    const [trainingRange, setTrainingRange] = useState(30);
+    const [desiredWeight, setDesiredWeight] = useState();
+    const [trainingRange, setTrainingRange] = useState();
 
     const surveyData = useSelector((state) => (state.surveyDataReducer));
 
     const dispatch = useDispatch();
-
-    const submitHandler = (e) => {
-        e.preventDefault();
-        console.log(mainTarget, desiredWeight, trainingRange);
-    }
 
     useEffect(() => {
         setMainTarget(surveyData.userMainTarget)
@@ -23,10 +19,24 @@ const AccountTarget = () => {
         setTrainingRange(surveyData.trainingPeriod);
     }, [surveyData])
 
+    const dataForSave = {
+        userTargetWeight: desiredWeight,
+        trainingPeriod: trainingRange,
+        userMainTarget: mainTarget
+    }
+
+    const saveSurveyData = (e) => {
+        e.preventDefault();
+        dispatch({
+            type: SAVE_SURVEY_DATA,
+            payload: dataForSave
+        });
+    }
+
     return (
         <div>
             <div className={style.form__wrap}>
-                <form onSubmit={event => submitHandler(event)} action="" className={style.form_target}>
+                <form onSubmit={saveSurveyData} action="" className={style.form_target}>
                     <label className={style.form_target_item} htmlFor="mainTarget">
                         <span>Ваша цель: </span>
                         <select className={style.form_target_item_select} value={mainTarget} onChange={event => setMainTarget(event.target.value)}>
