@@ -6,7 +6,8 @@ const useFetch = (url) => {
   const [error, setError] = useState();
 
   useEffect(() => {
-    fetch(url,
+    fetch(url
+      ,
       {
         headers: {
           'Content-Type': 'application/json',
