@@ -6,9 +6,11 @@
 }
 
 .button {
+  box-sizing: border-box;
   padding: 20px 30px;
   color: #fff;
   background: #FF6118;
+  border: 2px solid #FF6118;
   border-radius: 20px;
   font-size: 20px;
   line-height: 30px;

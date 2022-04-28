@@ -1,0 +1,91 @@
+.food {
+  max-width: 1140px;
+  margin: 65px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+  .food__header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .food__count {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+    margin-right: 5rem; }
+  .food__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 53px;
+    color: #000000; }
+  .food__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 42px;
+    padding-bottom: 46px;
+    border-bottom: 2px solid #000000; }
+  .food__img {
+    width: 296px; }
+  .food__description {
+    margin-left: 5rem;
+    text-align: left;
+    max-width: 60%; }
+  .food__subtitle {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 47px;
+    color: #000000; }
+  .food__productDescription {
+    margin-top: 35px;
+    margin-bottom: 41px; }
+  .food__selectInp {
+    max-width: 150px;
+    font-size: inherit; }
+  .food__selectInp:hover {
+    cursor: pointer; }
+  .food__portions {
+    margin-left: 1rem;
+    margin-right: 1rem; }
+  .food__portions::before {
+    content: url("../../images/recipe/portions.png");
+    margin-right: 0.5rem;
+    border-left: 1px solid #000000;
+    padding-left: 0.5rem; }
+  .food__timer::before {
+    content: url("../../images/recipe/time.png");
+    margin-right: 0.5rem; }
+  .food__recipe {
+    margin-bottom: 41px; }
+  .food__recipe p {
+    line-height: 1.5; }
+  .food__btn {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+    background: #FF6118;
+    border-radius: 20px;
+    padding: 8px 35px;
+    max-width: 300px; }
+  .food__like::before {
+    content: url("../../images/recipe/like.png");
+    margin-right: 0.5rem; }
+  .food__dislike:before {
+    content: url("../../images/recipe/dislike.png");
+    margin-right: 0.5rem; }
+  .food__favorites:before {
+    content: url("../../images/recipe/favorites.png");
+    margin-right: 0.5rem; }
+  .food__favorites, .food__like, .food__dislike {
+    margin-left: 2rem; }
+
+/*# sourceMappingURL=recipesItem.module.css.map */

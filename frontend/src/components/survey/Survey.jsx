@@ -2,6 +2,9 @@ import style from './survey.module.scss';
 import '../../styles/style.scss'
 import { useState } from "react";
 import Footer from '../footer/Footer';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { SAVE_SURVEY_DATA } from '../../store/types/surveyTypes';
 
 const Survey = () => {
     const [age, setAge] = useState('18');
@@ -9,6 +12,7 @@ const Survey = () => {
     const [height, setHeight] = useState('180');
     const [targetWeight, setTargetWeight] = useState('60');
     const [howDays, setHowDays] = useState('30');
+    const [mainTarget, setMainTarget] = useState("Сохранение моего нынешнего веса");
 
     const [checked, setChecked] = useState(false);
 
@@ -16,9 +20,36 @@ const Survey = () => {
         setChecked(checked ? true : !checked);
     };
 
+    const navigate = useNavigate()
+
+    const dispatch = useDispatch();
+
+    const dataForSave = {
+        userAge: age,
+        userWeight: weight,
+        userHeight: height,
+        userTargetWeight: targetWeight,
+        trainingPeriod: howDays,
+        userMainTarget: mainTarget
+    }
+    const saveSurveyData = (e) => {
+        e.preventDefault();
+        dispatch({
+            type: SAVE_SURVEY_DATA,
+            payload: dataForSave
+        });
+        setAge("");
+        setWeight("");
+        setHeight("");
+        setTargetWeight("");
+        setHowDays("");
+        setMainTarget("");
+        navigate("/account")
+    }
+
     return (
         <div className={style.survey}>
-            <form className={style.survey__form} action="">
+            <form className={style.survey__form} onSubmit={saveSurveyData}>
                 <div className={style.survey__top}>
                     <div className={style.survey__wrap}>
                         <div className={style.survey__wrap_block}>
@@ -105,17 +136,17 @@ const Survey = () => {
                                 </div>
                                 <div className={style.survey__item}>
                                     <label className={style.radio} htmlFor="aim1">
-                                        <input class={style.radio__input} type="radio" id="aim1" name="aim" onClick={() => (setChecked(false))} />
+                                        <input class={style.radio__input} value="Потеря веса" type="radio" id="aim1" name="aim" onChange={event => setMainTarget(event.target.value)} onClick={() => (setChecked(false))} />
                                         <span class={`${style.radio__box} ${style.radio__box_black}`}></span>
                                         Потеря веса
                                     </label>
                                     <label className={style.radio} htmlFor="aim2">
-                                        <input class={style.radio__input} type="radio" id="aim2" name="aim" onClick={handleChangeCheckbox} />
+                                        <input class={style.radio__input} value="Сохранение моего нынешнего веса" type="radio" id="aim2" name="aim" onChange={event => setMainTarget(event.target.value)} onClick={handleChangeCheckbox} />
                                         <span class={`${style.radio__box} ${style.radio__box_black}`}></span>
                                         Сохранение моего нынешнего веса
                                     </label>
                                     <label className={style.radio} htmlFor="aim3">
-                                        <input class={style.radio__input} type="radio" id="aim3" name="aim" onClick={() => (setChecked(false))} />
+                                        <input class={style.radio__input} value="Увеличение веса" type="radio" id="aim3" name="aim" onChange={event => setMainTarget(event.target.value)} onClick={() => (setChecked(false))} />
                                         <span class={`${style.radio__box} ${style.radio__box_black}`}></span>
                                         Увеличение веса
                                     </label>
@@ -275,7 +306,7 @@ const Survey = () => {
                                     </label>
                                 </div>
                             </div>
-                            <bottom className={style.survey__btn} type="submit">Сохранить Данные</bottom>
+                            <button className={style.survey__btn} type="submit">Сохранить Данные</button>
                         </div>
                     </div>
                 </div>

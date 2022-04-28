@@ -16,6 +16,10 @@ import AccountAchievments from "./components/Account/AccountAchievments/index";
 import AccountFavorites from "./components/Account/AccountFavorites/index";
 import ModalWindow from "./components/modalWindow/ModalWindow";
 import Survey from "./components/survey/Survey";
+import FirstCourse from "./components/Recipes/firstCourse/FirstCourse";
+import SecondCourse from "./components/Recipes/secondCourse/SecondCourse";
+import Salads from "./components/Recipes/salads/Salads";
+import Desserts from "./components/Recipes/desserts/Desserts";
 
 function App(props) {
     const [isModal, setModal] = useState(true);
@@ -44,7 +48,12 @@ function App(props) {
                 <Routes>
                     <Route exact path="/" element={<MainPage />} />
                     <Route path="/workout" element={<Workout />} />
-                    <Route path="/recipes" element={<Recipes link='recipesCarouselItems' />} />
+                    {/*<Route path="/recipes" element={<Recipes link='recipesCarouselItems' />} />*/}
+                    <Route path="/recipes" element={<Recipes />} />
+                    <Route path="/recipes/firstCourse" element={<FirstCourse />} />
+                    <Route path="/recipes/secondCourse" element={<SecondCourse />} />
+                    <Route path="/recipes/salads" element={<Salads />} />
+                    <Route path="/recipes/desserts" element={<Desserts />} />
                     <Route path="/contacts" element={<Contacts />} />
                     <Route path="/survey" element={<Survey />} />
                     <Route path="/account" element={<AccountNavbar />}>

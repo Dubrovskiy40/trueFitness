@@ -1,8 +1,8 @@
-import './carouselArrows.css'
+import style from './carouselArrows.module.scss'
 
 const CarouselArrowLeft = () => {
   return (
-    <div className="carousel__arrow carousel__arrow--left"> &lt;
+    <div className={`${style.carousel__arrow} ${style.carousel__arrow_left}`}> &lt;
     </div>
   )
 }
