@@ -8,7 +8,8 @@ import { useEffect, useState } from 'react';
 
 const CarouselComp = (props) => {
   // const { data, isLoading, error } = useFetch('http://localhost:8000/' + props.link);
-  // Кастомный хук выше работает на локальном json сервере, можно будет переделать, когда заработает бэк
+  // Кастомный хук выше работает на локальном json сервере, 
+  // можно будет переделать, когда заработает бэк
 
   const [data, setData] = useState();
 

@@ -1,0 +1,33 @@
+.trainings {
+  &__header {
+    background-color: black;
+    color: white;
+
+    &_wrapper {
+      position: relative;
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    &_title {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 53px;
+      padding: 25px 0;
+    }
+
+    &_count {
+      position: absolute;
+      left: 0;
+      top: 35px;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  &__cards {
+    margin: 0 auto;
+    max-width: 1140px;
+  }
+}

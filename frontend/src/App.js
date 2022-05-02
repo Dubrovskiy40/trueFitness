@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import {useState} from "react";
+import { useState } from "react";
 
 import Footer from "./components/footer/Footer";
 import Header from "./components/header";
@@ -8,7 +8,6 @@ import MainPage from "./components/MainPage"
 import Error from "./components/Error"
 import Recipes from "./components/Recipes"
 import Contacts from "./components/Contacts"
-import Workout from "./components/Workout"
 import Account from "./components/Account/AccountGeneral"
 import AccountNavbar from './components/Account/AccountNavbar/AccountNavbar';
 import AccountTarget from "./components/Account/AccountTarget/index";
@@ -20,6 +19,7 @@ import FirstCourse from "./components/Recipes/firstCourse/FirstCourse";
 import SecondCourse from "./components/Recipes/secondCourse/SecondCourse";
 import Salads from "./components/Recipes/salads/Salads";
 import Desserts from "./components/Recipes/desserts/Desserts";
+import Trainings from './components/Trainings';
 
 function App(props) {
     const [isModal, setModal] = useState(true);
@@ -47,7 +47,7 @@ function App(props) {
                 <Header />
                 <Routes>
                     <Route exact path="/" element={<MainPage />} />
-                    <Route path="/workout" element={<Workout />} />
+                    <Route path="/Trainings" element={<Trainings />} />
                     {/*<Route path="/recipes" element={<Recipes link='recipesCarouselItems' />} />*/}
                     <Route path="/recipes" element={<Recipes />} />
                     <Route path="/recipes/firstCourse" element={<FirstCourse />} />
@@ -72,8 +72,8 @@ function App(props) {
                 </Routes>
                 {/* {!['/account'].includes(window.location.pathname) && <Footer />} */}
                 <ModalWindow visible={isModal}
-                             onCloseWindow={onCloseWindow}
-                             onOpenWindow={onOpenWindow}
+                    onCloseWindow={onCloseWindow}
+                    onOpenWindow={onOpenWindow}
                 />
             </Router>
         </div>
