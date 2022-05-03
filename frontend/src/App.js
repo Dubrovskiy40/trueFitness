@@ -20,6 +20,7 @@ import SecondCourse from "./components/Recipes/secondCourse/SecondCourse";
 import Salads from "./components/Recipes/salads/Salads";
 import Desserts from "./components/Recipes/desserts/Desserts";
 import Trainings from './components/Trainings';
+import TrainingPage from './components/TrainingPage';
 
 function App(props) {
     const [isModal, setModal] = useState(true);
@@ -47,7 +48,8 @@ function App(props) {
                 <Header />
                 <Routes>
                     <Route exact path="/" element={<MainPage />} />
-                    <Route path="/Trainings" element={<Trainings />} />
+                    <Route path="/trainings" element={<Trainings />} />
+                    <Route path="/trainings/:trainingUrl" element={<TrainingPage />} />
                     {/*<Route path="/recipes" element={<Recipes link='recipesCarouselItems' />} />*/}
                     <Route path="/recipes" element={<Recipes />} />
                     <Route path="/recipes/firstCourse" element={<FirstCourse />} />
