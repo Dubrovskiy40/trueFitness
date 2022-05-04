@@ -5,10 +5,12 @@ import user from "./user";
 import { userData } from "./userData"
 import surveyDataReducer from "./surveyDataReducer";
 import foodReducer from "./food";
+import favoritesReducer from "./favorites";
 
 const rootReducer = combineReducers({
     user,
     food: foodReducer,
+    favorites: favoritesReducer,
     userData,
     surveyDataReducer,
 });
