@@ -4,8 +4,9 @@ import {addFavorites, fetchFavorites} from "../../../actions/favoritesAction";
 import {useDispatch, useSelector} from "react-redux";
 
 const FirstCourse = () => {
-    const data = useSelector((state) => state?.favorites);
     const [state, setState] = useState(null);
+
+    const dataFavorites = useSelector((state) => state.favorites);
     const [value, setValue] = useState(null);
     const dispatch = useDispatch();
 
@@ -16,14 +17,19 @@ const FirstCourse = () => {
     }, []);
 
     useEffect(() => {
-        console.log(data);
-        if (!data) {
+        console.log('dataFavorites',dataFavorites);
+        if (!dataFavorites) {
             dispatch(fetchFavorites());
         }
-    }, [data]);
+    }, [dataFavorites]);
 
     const handlerSubmit = (e) => {
         e.preventDefault();
+
+        console.log('local',window.location.href)
+        // const form = e.target;
+        console.log('target', e.target.value);
+        setValue('Добавили суп');
         dispatch(addFavorites(value));
         setValue(null);
     };
