@@ -1,0 +1,79 @@
+.training_page__header_info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px; }
+  .training_page__header_info div {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 36px;
+    opacity: 50%;
+    margin-right: 25px; }
+.training_page__header_title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 47px;
+  padding: 28px 0;
+  color: #FFFFFF; }
+  .training_page__header_title_background {
+    background-color: black; }
+.training_page__header_duration {
+  display: inline-flex;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 36px; }
+  .training_page__header_duration::before {
+    content: url("../../images/icons/chronograph-watch.png");
+    margin-right: 24px; }
+.training_page__header_button {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #FFFFFF;
+  background: #FF6118;
+  border-radius: 20px;
+  padding: 8px 35px;
+  max-width: 300px;
+  margin: 0 110px; }
+.training_page__header_favorite::before {
+  background-image: url("../../images/icons/favorite-svgrepo-com.svg");
+  background-size: 25px 25px;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  content: ""; }
+.training_page__header_like::before {
+  background-image: url("../../images/icons/like-svgrepo-com.svg");
+  background-size: 25px 25px;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  content: ""; }
+.training_page__header_dislike::before {
+  background-image: url("../../images/icons/like-svgrepo-com.svg");
+  background-size: 25px 25px;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  content: "";
+  transform: scale(-1, -1); }
+.training_page__exercise {
+  max-width: 1140px;
+  margin: 43px auto 0; }
+  .training_page__exercise:last-child {
+    margin-bottom: 48px; }
+  .training_page__exercise_title {
+    display: flex;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 47px;
+    margin-bottom: 43px; }
+  .training_page__exercise_description {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: left;
+    white-space: pre-line;
+    margin-top: 28px; }
+
+/*# sourceMappingURL=trainingpage.module.css.map */

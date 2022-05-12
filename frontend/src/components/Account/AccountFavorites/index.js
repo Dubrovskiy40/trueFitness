@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import {addFavorites, fetchFavorites} from "../../../actions/favoritesAction";
+import { useSelector } from "react-redux";
 
 export default () => {
-    const data = useSelector((state) => state?.favorites);
+    const data = useSelector((state) => state.favorites);
+    console.log('data',data)
 
   return (
     <div>
@@ -12,7 +12,7 @@ export default () => {
             {
                 data
                     ? data.map(el => {
-                        <li key={el}>{el}</li>
+                        <li key={el.id}>{el.test}</li>
                     })
                     : 'В избранное ничего не добавлено ¯\\_(ツ)_/¯'
             }
