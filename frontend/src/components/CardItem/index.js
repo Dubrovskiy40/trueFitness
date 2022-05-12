@@ -1,5 +1,6 @@
 import style from './cardItem.module.scss';
 const CardItem = ({item}) => {
+    console.log('item',item)
     return (
         <div className={style.card__item}>
             <a target="_blank" href={item.link} key={item.id}>

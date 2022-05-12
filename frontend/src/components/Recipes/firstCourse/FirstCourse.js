@@ -5,7 +5,10 @@ import {useDispatch, useSelector} from "react-redux";
 
 const FirstCourse = () => {
     const [state, setState] = useState(null);
-
+    const [likeActive, setLikeActive] = useState(false);
+    const [like, setLike] = useState(5);
+    const [dislikeActive, setDislikeActive] = useState(false);
+    const [dislike, setDislike] = useState(3);
     const dataFavorites = useSelector((state) => state.favorites);
     const [value, setValue] = useState(null);
     const dispatch = useDispatch();
@@ -34,11 +37,35 @@ const FirstCourse = () => {
         setValue(null);
     };
 
+    const handleLike = () => {
+        if (dislikeActive) {
+            setLikeActive(prevState => !prevState)
+            setLike( likeActive ? like - 1 : like + 1)
+
+            setDislikeActive(prevState => !prevState)
+            setDislike(dislikeActive ? dislike - 1 : dislike + 1)
+        }
+        setLikeActive(prevState => !prevState)
+        setLike( likeActive ? like - 1 : like + 1)
+    };
+
+    const handleDislike = () => {
+        if (likeActive) {
+            setDislikeActive(prevState => !prevState)
+            setDislike(dislikeActive ? dislike - 1 : dislike + 1)
+
+            setLikeActive(prevState => !prevState)
+            setLike( likeActive ? like - 1 : like + 1)
+        }
+        setDislikeActive(prevState => !prevState)
+        setDislike(dislikeActive ? dislike - 1 : dislike + 1)
+    };
+
     return (
         <div className={style.food}>
             <div className={style.food__header}>
                 <span className={style.food__count}>Найдено {state?.length} рецептов</span>
-                <h1 className={style.food__title}>Салаты</h1>
+                <h1 className={style.food__title}>Первые блюда</h1>
             </div>
             {state && (
                 <ul className={style.food__wrap}>
@@ -68,8 +95,8 @@ const FirstCourse = () => {
                                     <div>
                                         <button className={style.food__btn} type="submit">Добавить в избранное</button>
                                         <span className={style.food__favorites}>555</span>
-                                        <span className={style.food__like}>5</span>
-                                        <span className={style.food__dislike}>5</span>
+                                        <span className={likeActive ? `${style.food__checked_red} ${style.food__like}` : style.food__like} onClick={handleLike}>{like}</span>
+                                        <span className={dislikeActive ? `${style.food__checked_red} ${style.food__dislike}` : style.food__dislike} onClick={handleDislike}>{dislike}</span>
                                     </div>
                                 </div>
                             </form>

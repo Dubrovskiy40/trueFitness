@@ -12,7 +12,7 @@ const CarouselComp = (props) => {
   // можно будет переделать, когда заработает бэк
 
   const [data, setData] = useState();
-
+  console.log('data',data)
   useEffect(() => {
     fetch('https://raw.githubusercontent.com/Dubrovskiy40/trueFitness/develop/frontend/data/db.json')
       .then((response) => {
@@ -24,6 +24,10 @@ const CarouselComp = (props) => {
       });
   }, [])
 
+
+  const showCard = () => {
+    console.log('click')
+  };
 
   return (
     <div className='carousel__wrapper'>
@@ -38,7 +42,7 @@ const CarouselComp = (props) => {
         leftArrow={<CarouselArrowLeft />}
         rightArrow={<CarouselArrowRight />}>
         {data.map((item, idx) => (
-          <CardItem item={item} key={idx} />
+          <CardItem item={item} key={idx} onClick={showCard} />
         ))}
       </Carousel>}
     </div >
