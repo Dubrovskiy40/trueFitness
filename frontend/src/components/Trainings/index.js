@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import TrainingCard from "../TrainingCard";
+import TrainingCard from "./TrainingCard";
 import style from "./trainings.module.scss"
 
 const Trainings = () => {
