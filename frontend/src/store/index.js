@@ -10,7 +10,7 @@ import trainingsReducer from "./trainingsReducer"
 
 const rootReducer = combineReducers({
     user,
-    food: foodReducer,
+    foodReducer,
     favorites: favoritesReducer,
     userData,
     surveyDataReducer,

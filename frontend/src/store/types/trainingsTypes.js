@@ -1,1 +1,1 @@
-export const SET_TRAININGS = "SET_FOOD";
+export const SET_TRAININGS = "SET_TRAININGS";

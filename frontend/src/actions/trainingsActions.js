@@ -1,6 +1,5 @@
 import { SET_TRAININGS } from "../store/types/trainingsTypes";
 
-
 export const setTrainings = (data) => ({
   type: SET_TRAININGS,
   payload: data,

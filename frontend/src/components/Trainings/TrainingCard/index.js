@@ -4,7 +4,7 @@ import style from './trainingcard.module.scss'
 const TrainingCard = ({ item }) => {
   return (
     <div className={style.training__card} key={item.id}>
-      <img src={require('../../../images/trainings/' + item.img)} alt="img" />
+      <img src={require('../../../images/trainings/' + item.url + '/' + item.img)} alt="img" />
       <div className={style.training__card_info}>
         <Link to={'/trainings/' + item.url} state={item}>
           <h2 className={style.training__card_heading}>{item.trainingName}</h2>

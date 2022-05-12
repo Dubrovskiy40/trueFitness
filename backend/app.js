@@ -77,8 +77,6 @@ const trainings = {
     ],
 };
 
-const favorites = [];
-
 // const recipeWeightDown = {
 //     'salads': [
 //     ],
@@ -100,7 +98,7 @@ const favorites = [];
 // };
 
 const favorites = [
-    { id: 1, test: 'Первое блюдо, добавленное в избранное'}
+    { id: 1, test: 'Первое блюдо, добавленное в избранное' }
 ];
 
 app.use(express.urlencoded({ extended: false }));
