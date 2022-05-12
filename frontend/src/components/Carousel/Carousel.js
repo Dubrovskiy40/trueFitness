@@ -36,6 +36,10 @@ const CarouselComp = (props) => {
     // }
   }, [dataForTrainings, dataForRecipes])
 
+  const showCard = () => {
+    console.log('click')
+  };
+
   return (
     <div className='carousel__wrapper'>
       <h2 className='carousel__title'>{props.slider}</h2>
