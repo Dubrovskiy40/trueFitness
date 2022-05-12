@@ -77,6 +77,8 @@ const trainings = {
     ],
 };
 
+const favorites = [];
+
 // const recipeWeightDown = {
 //     'salads': [
 //     ],
@@ -134,6 +136,14 @@ app.post("/food", (req, res) => {
     console.log(value);
     recipeWeightUp.push(value);
     res.json(recipeWeightUp);
+});
+
+app.post("/favorites", (req, res) => {
+    console.log(req.body, "body");
+    const { value } = req.body;
+    console.log(value);
+    favorites.push(value);
+    res.json(favorites);
 });
 
 app.get("/trainings", (req, res) => {
