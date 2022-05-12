@@ -6,6 +6,7 @@ import { userData } from "./userData"
 import surveyDataReducer from "./surveyDataReducer";
 import foodReducer from "./foodReducer";
 import favoritesReducer from "./favoritesReducer";
+import trainingsReducer from "./trainingsReducer"
 
 const rootReducer = combineReducers({
     user,
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
     favorites: favoritesReducer,
     userData,
     surveyDataReducer,
+    trainingsReducer,
 });
 
 export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));

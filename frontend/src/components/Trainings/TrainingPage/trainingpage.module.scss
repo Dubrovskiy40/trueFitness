@@ -35,7 +35,7 @@
       line-height: 36px;
 
       &::before {
-        content: url('../../images/icons/chronograph-watch.png');
+        content: url('../../../images/icons/chronograph-watch.png');
         margin-right: 24px;
       }
     }
@@ -54,7 +54,7 @@
 
     &_favorite {
       &::before {
-        background-image: url('../../images/icons/favorite-svgrepo-com.svg');
+        background-image: url('../../../images/icons/favorite-svgrepo-com.svg');
         background-size: 25px 25px;
         width: 25px;
         height: 25px;
@@ -65,7 +65,7 @@
 
     &_like {
       &::before {
-        background-image: url('../../images/icons/like-svgrepo-com.svg');
+        background-image: url('../../../images/icons/like-svgrepo-com.svg');
         background-size: 25px 25px;
         width: 25px;
         height: 25px;
@@ -76,7 +76,7 @@
 
     &_dislike {
       &::before {
-        background-image: url('../../images/icons/like-svgrepo-com.svg');
+        background-image: url('../../../images/icons/like-svgrepo-com.svg');
         background-size: 25px 25px;
         width: 25px;
         height: 25px;

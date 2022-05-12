@@ -2,7 +2,6 @@ import { Carousel } from '@trendyol-js/react-carousel';
 import './carousel.css';
 import CarouselArrowLeft from '../CarouselArrows/CarouselArrowLeft';
 import CarouselArrowRight from '../CarouselArrows/CarouselArrowRight';
-import useFetch from '../useFetch/useFetch';
 import CardItem from "../CardItem";
 import { useEffect, useState } from 'react';
 

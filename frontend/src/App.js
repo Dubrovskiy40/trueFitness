@@ -2,7 +2,6 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
-import Footer from "./components/footer/Footer";
 import Header from "./components/header";
 import MainPage from "./components/MainPage"
 import Error from "./components/Error"
@@ -20,7 +19,7 @@ import SecondCourse from "./components/Recipes/secondCourse/SecondCourse";
 import Salads from "./components/Recipes/salads/Salads";
 import Desserts from "./components/Recipes/desserts/Desserts";
 import Trainings from './components/Trainings';
-import TrainingPage from './components/TrainingPage';
+import TrainingPage from './components/Trainings/TrainingPage';
 
 function App(props) {
     const [isModal, setModal] = useState(true);

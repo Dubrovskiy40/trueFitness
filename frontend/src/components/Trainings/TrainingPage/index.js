@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import style from "./trainingpage.module.scss"
-import Footer from "../footer/Footer";
+import Footer from "../../footer/Footer";
 
 const TrainingPage = () => {
   const location = useLocation();
@@ -26,7 +26,7 @@ const TrainingPage = () => {
         {exercises.map((exercise, idx) => (
           <section className={style.training_page__exercise} key={idx}>
             <h1 className={style.training_page__exercise_title}>{exercise.exerciseName}</h1>
-            <img src={require('../../images/trainings/' + url + '/' + exercise.exerciseImg)} alt="img" />
+            <img src={require('../../../images/trainings/' + url + '/' + exercise.exerciseImg)} alt="img" />
             <p className={style.training_page__exercise_description}>{exercise.exerciseDescription}</p>
           </section>
         ))}
