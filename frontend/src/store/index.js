@@ -4,11 +4,13 @@ import thunk from "redux-thunk";
 import user from "./user";
 import { userData } from "./userData"
 import surveyDataReducer from "./surveyDataReducer";
-import foodReducer from "./food";
+import foodReducer from "./foodReducer";
+import favoritesReducer from "./favoritesReducer";
 
 const rootReducer = combineReducers({
     user,
     food: foodReducer,
+    favorites: favoritesReducer,
     userData,
     surveyDataReducer,
 });
