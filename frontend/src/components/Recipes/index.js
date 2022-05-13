@@ -1,5 +1,5 @@
 import style from "./Recipes.module.scss"
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // export default (props) => {
 //     const { data, isLoading, error } = useFetch('http://localhost:8000/' + props.link);
