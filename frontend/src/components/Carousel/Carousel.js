@@ -24,17 +24,17 @@ const CarouselComp = (props) => {
   //     });
   // }, [])
   const cardsToShow = 2;
+  const dataForRecipeCategories = useSelector((state) => (state.foodCategoriesReducer))
   const dataForTrainings = useSelector((state) => (state.trainingsReducer))
-  const dataForRecipes = useSelector((state) => (state.foodReducer))
 
   useEffect(() => {
+    if (props.category === 'recipe') {
+      setData(dataForRecipeCategories)
+    }
     if (props.category === 'trainings') {
       setData(dataForTrainings)
     }
-    // if (props.category === 'categories') {
-    //   setData(dataForRecipes)
-    // }
-  }, [dataForTrainings, dataForRecipes])
+  }, [dataForRecipeCategories, dataForTrainings])
 
   const showCard = () => {
     console.log('click')

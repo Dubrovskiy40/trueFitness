@@ -44,6 +44,33 @@ const recipeWeightUp = {
     ],
 };
 
+const foodCategories = [
+    {
+        img: "salads-preview.png",
+        recipesCategory: "Салаты",
+        url: "categories",
+        id: "salads-preview"
+    },
+    {
+        img: "desserts-preview.png",
+        recipesCategory: "Десерты",
+        url: "categories",
+        id: "desserts-preview"
+    },
+    {
+        img: "first-course-preview.png",
+        recipesCategory: "Первое блюдо",
+        url: "categories",
+        id: "first-course-preview"
+    },
+    {
+        img: "second-course-preview.png",
+        recipesCategory: "Второе блюдо",
+        url: "categories",
+        id: "second-course-preview"
+    },
+];
+
 const trainings = {
     allTrainings: [
         {
@@ -118,6 +145,10 @@ app.post("/auth", (req, res) => {
         }
     }
     res.sendStatus(400);
+});
+
+app.get("/foodCategories", (req, res) => {
+    res.json(foodCategories);
 });
 
 app.get("/trainings", (req, res) => {

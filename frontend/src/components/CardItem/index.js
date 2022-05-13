@@ -9,7 +9,9 @@ const CardItem = ({ item, category }) => {
                     className={style.card__item__img}
                     alt=""
                 />
-                <h3 className={style.card__item__heading + ' heading--top-left'}>{item.trainingName}</h3>
+                <h3 className={style.card__item__heading + ' heading--top-left'}>
+                    {category === 'trainings' ? item.trainingName : item.recipesCategory}
+                </h3>
             </a>
         </div>
     )
