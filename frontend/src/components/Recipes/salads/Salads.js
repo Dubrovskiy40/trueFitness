@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import style from '../recipesItem.module.scss';
 import ItemPagination from '../../ItemPagination';
+
 const Salads = () => {
     const [salads, setSalads] = useState(null);
     const [likeActive, setLikeActive] = useState(false);

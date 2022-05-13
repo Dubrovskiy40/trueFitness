@@ -135,12 +135,13 @@
   }
 
   &__favorites:before {
-    content: url('../../images/recipe/favorites.png');
+    content: url('../../images/icons/favorite-svgrepo-com.svg');
     margin-right: 0.5rem;
   }
 
   &__favorites, &__like, &__dislike {
     margin-left: 2rem;
+    opacity: 0.5;
   }
 
   &__checked_red {
