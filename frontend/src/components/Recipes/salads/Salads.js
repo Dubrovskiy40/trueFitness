@@ -3,6 +3,10 @@ import style from '../recipesItem.module.scss';
 
 const Salads = () => {
     const [salads, setSalads] = useState(null);
+    const [likeActive, setLikeActive] = useState(false);
+    const [like, setLike] = useState(5);
+    const [dislikeActive, setDislikeActive] = useState(false);
+    const [dislike, setDislike] = useState(3);
 
     useEffect(() => {
         fetch("http://localhost:3001/food")
@@ -10,6 +14,30 @@ const Salads = () => {
             .then((data) => setSalads(data.salads));
 
     }, []);
+
+    const handleLike = () => {
+        if (dislikeActive) {
+            setLikeActive(prevState => !prevState)
+            setLike( likeActive ? like - 1 : like + 1)
+
+            setDislikeActive(prevState => !prevState)
+            setDislike(dislikeActive ? dislike - 1 : dislike + 1)
+        }
+        setLikeActive(prevState => !prevState)
+        setLike( likeActive ? like - 1 : like + 1)
+    };
+
+    const handleDislike = () => {
+        if (likeActive) {
+            setDislikeActive(prevState => !prevState)
+            setDislike(dislikeActive ? dislike - 1 : dislike + 1)
+
+            setLikeActive(prevState => !prevState)
+            setLike( likeActive ? like - 1 : like + 1)
+        }
+        setDislikeActive(prevState => !prevState)
+        setDislike(dislikeActive ? dislike - 1 : dislike + 1)
+    };
 
     return (
         <div className={style.food}>
@@ -44,8 +72,8 @@ const Salads = () => {
                                 <div>
                                     <button className={style.food__btn}>Добавить в избранное</button>
                                     <span className={style.food__favorites}>555</span>
-                                    <span className={style.food__like}>5</span>
-                                    <span className={style.food__dislike}>5</span>
+                                    <span className={likeActive ? `${style.food__checked_red} ${style.food__like}` : style.food__like} onClick={handleLike}>{like}</span>
+                                    <span className={dislikeActive ? `${style.food__checked_red} ${style.food__dislike}` : style.food__dislike} onClick={handleDislike}>{dislike}</span>
                                 </div>
                             </div>
                         </li>

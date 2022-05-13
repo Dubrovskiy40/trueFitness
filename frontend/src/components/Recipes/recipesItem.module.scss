@@ -109,14 +109,29 @@
     max-width: 300px;
   }
 
+  &__like:hover, &__dislike:hover {
+    cursor: pointer;
+  }
+
   &__like::before {
-    content: url('../../images/recipe/like.png');
+    background-image: url('../../images/icons/like-svgrepo-com.svg');
+    content: '';
     margin-right: 0.5rem;
+    width: 25px;
+    height: 25px;
+    background-size: 25px 25px;
+    display: inline-block;
   }
 
   &__dislike:before {
-    content: url('../../images/recipe/dislike.png');
+    background-image: url('../../images/icons/like-svgrepo-com.svg');
+    content: '';
     margin-right: 0.5rem;
+    width: 25px;
+    height: 25px;
+    background-size: 25px 25px;
+    display: inline-block;
+    transform: scale(-1, -1);
   }
 
   &__favorites:before {
@@ -126,5 +141,9 @@
 
   &__favorites, &__like, &__dislike {
     margin-left: 2rem;
+  }
+
+  &__checked_red {
+    color: red;
   }
 }

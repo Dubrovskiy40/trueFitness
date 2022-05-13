@@ -2,9 +2,9 @@ import { Carousel } from '@trendyol-js/react-carousel';
 import './carousel.css';
 import CarouselArrowLeft from '../CarouselArrows/CarouselArrowLeft';
 import CarouselArrowRight from '../CarouselArrows/CarouselArrowRight';
-import useFetch from '../useFetch/useFetch';
 import CardItem from "../CardItem";
 import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 const CarouselComp = (props) => {
   // const { data, isLoading, error } = useFetch('http://localhost:8000/' + props.link);
@@ -13,17 +13,32 @@ const CarouselComp = (props) => {
 
   const [data, setData] = useState();
 
-  useEffect(() => {
-    fetch('https://raw.githubusercontent.com/Dubrovskiy40/trueFitness/develop/frontend/data/db.json')
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        let link = props.link
-        setData(data[link]);
-      });
-  }, [])
+  // useEffect(() => {
+  //   fetch('https://raw.githubusercontent.com/Dubrovskiy40/trueFitness/develop/frontend/data/db.json')
+  //     .then((response) => {
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       let link = props.link
+  //       setData(data[link]);
+  //     });
+  // }, [])
+  const cardsToShow = 2;
+  const dataForTrainings = useSelector((state) => (state.trainingsReducer))
+  const dataForRecipes = useSelector((state) => (state.foodReducer))
 
+  useEffect(() => {
+    if (props.category === 'trainings') {
+      setData(dataForTrainings)
+    }
+    // if (props.category === 'categories') {
+    //   setData(dataForRecipes)
+    // }
+  }, [dataForTrainings, dataForRecipes])
+
+  const showCard = () => {
+    console.log('click')
+  };
 
   return (
     <div className='carousel__wrapper'>
@@ -38,7 +53,7 @@ const CarouselComp = (props) => {
         leftArrow={<CarouselArrowLeft />}
         rightArrow={<CarouselArrowRight />}>
         {data.map((item, idx) => (
-          <CardItem item={item} key={idx} />
+          <CardItem item={item} key={idx} category={props.category} />
         ))}
       </Carousel>}
     </div >

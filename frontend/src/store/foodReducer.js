@@ -5,7 +5,7 @@ const initialState = null;
 const foodReducer = (state = initialState, { type, payload }) => {
     switch (type) {
         case SET_FOOD:
-            return [...payload];
+            return payload;
 
         default:
             return state;

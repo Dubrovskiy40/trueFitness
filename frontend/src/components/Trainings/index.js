@@ -1,14 +1,16 @@
-import { useEffect, useState } from "react";
-import TrainingCard from "../TrainingCard";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { fetchTrainings } from "../../actions/trainingsActions";
+import TrainingCard from "./TrainingCard";
 import style from "./trainings.module.scss"
 
 const Trainings = () => {
-  const [trainings, setTrainings] = useState();
+  const trainings = useSelector((state) => (state.trainingsReducer))
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    fetch("http://localhost:3001/trainings")
-      .then((response) => response.json())
-      .then((data) => setTrainings(data.allTrainings));
+    dispatch(fetchTrainings())
   }, []);
 
   return (
