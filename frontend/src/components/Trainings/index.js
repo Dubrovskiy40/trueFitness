@@ -1,17 +1,9 @@
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { fetchTrainings } from "../../actions/trainingsActions";
 import TrainingCard from "./TrainingCard";
 import style from "./trainings.module.scss"
 
 const Trainings = () => {
   const trainings = useSelector((state) => (state.trainingsReducer))
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchTrainings())
-  }, []);
 
   return (
     <div className={style.trainings}>

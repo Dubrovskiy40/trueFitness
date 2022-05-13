@@ -49,24 +49,28 @@ const foodCategories = [
         img: "salads-preview.png",
         recipesCategory: "Салаты",
         url: "categories",
+        link: "salads",
         id: "salads-preview"
     },
     {
         img: "desserts-preview.png",
         recipesCategory: "Десерты",
         url: "categories",
+        link: "desserts",
         id: "desserts-preview"
     },
     {
         img: "first-course-preview.png",
         recipesCategory: "Первое блюдо",
         url: "categories",
+        link: "firstCourse",
         id: "first-course-preview"
     },
     {
         img: "second-course-preview.png",
         recipesCategory: "Второе блюдо",
         url: "categories",
+        link: "secondCourse",
         id: "second-course-preview"
     },
 ];

@@ -1,10 +1,10 @@
+import { Link } from 'react-router-dom';
 import style from './cardItem.module.scss';
 const CardItem = ({ item, category }) => {
     return (
         <div className={style.card__item}>
-            <a target="_blank" href={`${category}/${item.url}`} key={item.id}>
+            <Link to={category === 'trainings' ? `${category}/${item.url}` : `recipes/${item.link}`} key={item.id} state={item}>
                 <img
-                    // src={require("../../images/carousel/" + item.backgroundImg)}
                     src={require("../../images/" + category + '/' + item.url + '/' + item.img)}
                     className={style.card__item__img}
                     alt=""
@@ -12,7 +12,7 @@ const CardItem = ({ item, category }) => {
                 <h3 className={style.card__item__heading + ' heading--top-left'}>
                     {category === 'trainings' ? item.trainingName : item.recipesCategory}
                 </h3>
-            </a>
+            </Link>
         </div>
     )
 }
