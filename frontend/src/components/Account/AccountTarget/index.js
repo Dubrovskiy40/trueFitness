@@ -1,6 +1,5 @@
 import style from "./index.module.scss";
 import { useEffect, useState } from "react";
-import Footer from '../../footer/Footer';
 import { useDispatch, useSelector } from "react-redux";
 import { SAVE_SURVEY_DATA } from "../../../store/types/surveyTypes";
 
@@ -86,7 +85,6 @@ const AccountTarget = () => {
                     <button type="submit" className={`${style.form_target_button} button`}>Редактировать данные</button>
                 </form>
             </div>
-            <Footer bgcWhite={false} />
         </div>
     )
 }
