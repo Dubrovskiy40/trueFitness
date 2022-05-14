@@ -26,7 +26,9 @@ const TrainingPage = () => {
         {exercises.map((exercise, idx) => (
           <section className={style.training_page__exercise} key={idx}>
             <h1 className={style.training_page__exercise_title}>{exercise.exerciseName}</h1>
-            <img src={require('../../../images/trainings/' + url + '/' + exercise.exerciseImg)} alt="img" />
+            {exercise.exerciseImg.map((img, idx) => (
+              <img src={require('../../../images/trainings/' + url + '/' + img)} alt="img" />
+            ))}
             <p className={style.training_page__exercise_description}>{exercise.exerciseDescription}</p>
           </section>
         ))}

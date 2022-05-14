@@ -8,6 +8,9 @@ import { fetchTrainings } from "../../actions/trainingsActions";
 const Trainings = () => {
 
   const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(fetchTrainings())
+  }, []);
 
   useEffect(() => {
     dispatch(fetchTrainings())
