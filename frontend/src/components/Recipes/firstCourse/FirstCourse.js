@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import style from "../recipesItem.module.scss";
-import {addFavorites, fetchFavorites} from "../../../actions/favoritesAction";
+import {fetchFavorites} from "../../../actions/favoritesAction";
 import {useDispatch, useSelector} from "react-redux";
 
 const FirstCourse = () => {
@@ -26,16 +26,16 @@ const FirstCourse = () => {
         }
     }, [dataFavorites]);
 
-    const handlerSubmit = (e) => {
-        e.preventDefault();
-
-        console.log('local',window.location.href)
-        // const form = e.target;
-        console.log('target', e.target.value);
-        setValue('Добавили суп');
-        dispatch(addFavorites(value));
-        setValue(null);
-    };
+    // const handlerSubmit = (e) => {
+    //     e.preventDefault();
+    //
+    //     console.log('local',window.location.href)
+    //     // const form = e.target;
+    //     console.log('target', e.target.value);
+    //     setValue('Добавили суп');
+    //     dispatch(addFavorites(value));
+    //     setValue(null);
+    // };
 
     const handleLike = () => {
         if (dislikeActive) {
@@ -71,7 +71,7 @@ const FirstCourse = () => {
                 <ul className={style.food__wrap}>
                     {state.map((item) => (
                         <li className={style.food__main}>
-                            <form onSubmit={handlerSubmit}>
+                            {/*<form onSubmit={handlerSubmit}>*/}
                                 <div>
                                     <img className={style.food__img} src={item.img} alt="img"/>
                                 </div>
@@ -99,7 +99,7 @@ const FirstCourse = () => {
                                         <span className={dislikeActive ? `${style.food__checked_red} ${style.food__dislike}` : style.food__dislike} onClick={handleDislike}>{dislike}</span>
                                     </div>
                                 </div>
-                            </form>
+                            {/*</form>*/}
                         </li>
                     ))}
                 </ul>

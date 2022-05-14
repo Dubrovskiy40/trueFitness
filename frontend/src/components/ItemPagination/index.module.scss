@@ -1,0 +1,45 @@
+.pagination {
+  display: flex;
+  list-style: none;
+  margin-top: 24px;
+  text-align: center;
+  justify-content: space-evenly;
+
+  &__btn {
+
+    border: none;
+    background-color: #fff;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 137.69%;
+    color: #474955;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      color: #FF6118;
+    }
+  }
+
+  &__links {
+    display: flex;
+
+
+    &__link {
+      cursor: pointer;
+      padding: 5px;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 137.69%;
+      text-decoration: none;
+      color: #474955;
+      transition: 0.2s;
+
+      &:hover {
+        color: #FF6118;
+      }
+    }
+  }
+}

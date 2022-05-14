@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import style from "../recipesItem.module.scss";
 
 const SecondCourse = () => {
@@ -18,13 +18,13 @@ const SecondCourse = () => {
     const handleLike = () => {
         if (dislikeActive) {
             setLikeActive(prevState => !prevState)
-            setLike( likeActive ? like - 1 : like + 1)
+            setLike(likeActive ? like - 1 : like + 1)
 
             setDislikeActive(prevState => !prevState)
             setDislike(dislikeActive ? dislike - 1 : dislike + 1)
         }
         setLikeActive(prevState => !prevState)
-        setLike( likeActive ? like - 1 : like + 1)
+        setLike(likeActive ? like - 1 : like + 1)
     };
 
     const handleDislike = () => {
@@ -33,7 +33,7 @@ const SecondCourse = () => {
             setDislike(dislikeActive ? dislike - 1 : dislike + 1)
 
             setLikeActive(prevState => !prevState)
-            setLike( likeActive ? like - 1 : like + 1)
+            setLike(likeActive ? like - 1 : like + 1)
         }
         setDislikeActive(prevState => !prevState)
         setDislike(dislikeActive ? dislike - 1 : dislike + 1)
@@ -50,7 +50,7 @@ const SecondCourse = () => {
                     {state.map((item) => (
                         <li className={style.food__main}>
                             <div>
-                                <img className={style.food__img} src={item.img} alt="img"/>
+                                <img className={style.food__img} src={item.img} alt="img" />
                             </div>
                             <div className={style.food__description}>
                                 <h2 className={style.food__subtitle}>{item.nameRecipe}</h2>

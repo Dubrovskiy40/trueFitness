@@ -1,5 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import style from '../recipesItem.module.scss';
+import ItemPagination from '../../ItemPagination';
 
 const Salads = () => {
     const [salads, setSalads] = useState(null);
@@ -18,13 +19,13 @@ const Salads = () => {
     const handleLike = () => {
         if (dislikeActive) {
             setLikeActive(prevState => !prevState)
-            setLike( likeActive ? like - 1 : like + 1)
+            setLike(likeActive ? like - 1 : like + 1)
 
             setDislikeActive(prevState => !prevState)
             setDislike(dislikeActive ? dislike - 1 : dislike + 1)
         }
         setLikeActive(prevState => !prevState)
-        setLike( likeActive ? like - 1 : like + 1)
+        setLike(likeActive ? like - 1 : like + 1)
     };
 
     const handleDislike = () => {
@@ -33,11 +34,40 @@ const Salads = () => {
             setDislike(dislikeActive ? dislike - 1 : dislike + 1)
 
             setLikeActive(prevState => !prevState)
-            setLike( likeActive ? like - 1 : like + 1)
+            setLike(likeActive ? like - 1 : like + 1)
         }
         setDislikeActive(prevState => !prevState)
         setDislike(dislikeActive ? dislike - 1 : dislike + 1)
     };
+
+    // /////////////////////////////////////////////////////
+
+    // const [currentPage, setCurrentPage] = useState(1);
+    // const [itemsPerPage, setItemsPerPage] = useState(2)
+
+    // const indexOfLastItems = currentPage * itemsPerPage;
+    // const indexOfFirstItems = indexOfLastItems - itemsPerPage;
+    // const currentItems = salads.slice(indexOfFirstItems, indexOfLastItems);
+    // const pageNumbers = [];
+
+    // for (let i = 1; i <= Math.ceil(salads.length / itemsPerPage); i++) {
+    //     pageNumbers.push(i);
+    // }
+
+    // const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+    // const nextPage = () => {
+    //     if (currentPage !== pageNumbers.length) {
+    //         setCurrentPage(currentPage + 1);
+    //     }
+    // }
+
+    // const prevPage = () => {
+    //     if (currentPage !== 1) {
+    //         setCurrentPage(currentPage - 1);
+    //     }
+    // }
+    // /////////////////////////////////////////////////////
 
     return (
         <div className={style.food}>
@@ -50,7 +80,7 @@ const Salads = () => {
                     {salads.map((salad) => (
                         <li className={style.food__main}>
                             <div>
-                                <img className={style.food__img} src={salad.img} alt="img"/>
+                                <img className={style.food__img} src={salad.img} alt="img" />
                             </div>
                             <div className={style.food__description}>
                                 <h2 className={style.food__subtitle}>{salad.nameRecipe}</h2>
@@ -80,6 +110,12 @@ const Salads = () => {
                     ))}
                 </ul>
             )}
+            {/* <ItemPagination
+                pageNumbers={pageNumbers}
+                paginate={paginate}
+                nextPage={nextPage}
+                prevPage={prevPage}
+            /> */}
         </div>
     );
 };
