@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import style from '../recipesItem.module.scss';
 import ItemPagination from '../../ItemPagination';
+import { Link } from 'react-router-dom'
 const Salads = () => {
     const [salads, setSalads] = useState(null);
     const [likeActive, setLikeActive] = useState(false);
@@ -77,10 +78,10 @@ const Salads = () => {
             {salads && (
                 <ul className={style.food__wrap}>
                     {salads.map((salad) => (
-                        <li className={style.food__main}>
-                            <div>
+                        <li key={salad.id} className={style.food__main}>
+                            <Link to={`/recipes/salads/${salad.id}`} >
                                 <img className={style.food__img} src={salad.img} alt="img" />
-                            </div>
+                            </Link>
                             <div className={style.food__description}>
                                 <h2 className={style.food__subtitle}>{salad.nameRecipe}</h2>
                                 <div className={style.food__productDescription}>

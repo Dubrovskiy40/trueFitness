@@ -9,9 +9,16 @@ const Trainings = () => {
 
   const dispatch = useDispatch()
 
+  useEffect(() => {
+    dispatch(fetchTrainings())
+  }, []);
+
   const trainings = useSelector((state) => (state.trainingsReducer));
   const [currentPage, setCurrentPage] = useState(1);
   const [trainingsPerPage, setTrainingsPerPage] = useState(2)
+
+
+  console.log(trainings);
 
   const indexOfLastTrainings = currentPage * trainingsPerPage;
   const indexOfFirstTrainings = indexOfLastTrainings - trainingsPerPage;

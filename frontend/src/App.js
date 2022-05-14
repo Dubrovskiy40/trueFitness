@@ -20,6 +20,7 @@ import Salads from "./components/Recipes/salads/Salads";
 import Desserts from "./components/Recipes/desserts/Desserts";
 import Trainings from './components/Trainings';
 import TrainingPage from './components/Trainings/TrainingPage';
+import RecipesCard from './components/Recipes/RecipesCard';
 
 function App(props) {
     const [isModal, setModal] = useState(true);
@@ -55,7 +56,7 @@ function App(props) {
                     <Route path="/recipes/secondCourse" element={<SecondCourse />} />
                     <Route path="/recipes/salads" element={<Salads />} />
                     <Route path="/recipes/desserts" element={<Desserts />} />
-                    <Route path="/contacts" element={<Contacts />} />
+                    <Route path="/recipes/salads/:id" element={<RecipesCard />} />
                     <Route path="/survey" element={<Survey />} />
                     <Route path="/account" element={<AccountNavbar />}>
                         <Route index element={<Account

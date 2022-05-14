@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const ItemPagination = ({ pageNumbers, paginate, nextPage, prevPage }) => {
 
     return (
-        <div className={style.pagination + " " + "navbar-fixed-bottom"}>
+        <div className={style.pagination}>
             <button className={style.pagination__btn} onClick={() => prevPage()}>Назад</button>
             <div className={style.pagination__links}>
                 {pageNumbers.map((number) => (
